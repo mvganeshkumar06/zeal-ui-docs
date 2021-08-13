@@ -101,7 +101,9 @@ const Home = () => {
                     </List>
                     <br />
                     <Link href="/docs/getting-started">
-                        <Button>Documentation</Button>
+                        <a>
+                            <Button>Documentation</Button>
+                        </a>
                     </Link>
                     <Text>{theme === "light" ? "Light" : "Dark"} Theme</Text>
                     <ThemeSwitch className="themeSwitch" />
