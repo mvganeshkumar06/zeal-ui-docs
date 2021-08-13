@@ -1,0 +1,68 @@
+import { Layout, Divider, InlineCode } from "@zeal-ui/core";
+import { CodeSnippet } from "../../components/index";
+const inlineCodeImport=`
+import { InlineCode } from "@zeal-ui/core";
+`;
+const inlineCode=`
+<InlineCode>Inline Code</InlineCode>
+`;
+
+<Layout title="Inline Code">
+
+# InlineCode
+
+<Divider />
+
+## Import
+
+<CodeSnippet code={inlineCodeImport}/>
+
+## Usage
+
+<InlineCode>Inline Code</InlineCode>
+
+<CodeSnippet code={inlineCode}/>
+
+## Props
+
+<InlineCode>width</InlineCode>
+
+**Description**
+
+It is used to set the width of inline code.
+
+**Values**
+
+String with valid width.
+
+<Divider />
+
+<InlineCode>height</InlineCode>
+
+**Description**
+
+It is used to set the height of the inline code.
+
+**Values**
+
+String with valid height.
+
+<Divider />
+
+<InlineCode>color</InlineCode>
+
+**Description**
+
+It is used to set the color of inline code.
+
+**Values**
+
+"gray" | "red" | "yellow" | "blue" | "orange" | "green" | "purple" | "pink"
+
+<Divider />
+
+## Note
+
+To learn more about customizing the components check **[customizing components](/docs/customizing-components)** in the docs for more info.
+
+</Layout>

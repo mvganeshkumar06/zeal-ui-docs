@@ -1,0 +1,149 @@
+import { Layout, Divider, InlineCode, Text } from "@zeal-ui/core";
+import { CodeSnippet } from "../../components/index";
+const textImport=`
+import { Text } from "@zeal-ui/core";
+`;
+const mainHeading=`
+<Text type="mainHeading">Main Heading</Text>
+`;
+const subHeading=`
+<Text type="subHeading">Sub Heading</Text>
+`;
+const text=`
+<Text type="text">
+    Contrary to popular belief, Lorem Ipsum is not simply random
+    text. It has roots in a piece of classical Latin literature from
+    45 BC, making it over 2000 years old. Richard McClintock, a
+    Latin professor at Hampden-Sydney College in Virginia, looked up
+    one of the more obscure Latin words, consectetur, from a Lorem
+    Ipsum passage, and going through the cites of the word in
+    classical literature, discovered the undoubtable source.
+</Text>
+`;
+const textCustomized=`
+<Text width="15rem" height="10rem" bold center color="blue" scrollAuto>
+    Contrary to popular belief, Lorem Ipsum is not simply random
+    text. It has roots in a piece of classical Latin literature from
+    45 BC, making it over 2000 years old. Richard McClintock, a
+    Latin professor at Hampden-Sydney College in Virginia, looked up
+    one of the more obscure Latin words, consectetur, from a Lorem
+    Ipsum passage, and going through the cites of the word in
+    classical literature, discovered the undoubtable source.
+</Text>
+`;
+
+<Layout title="Text">
+
+# Text
+
+<Divider />
+
+## Import
+
+<CodeSnippet code={textImport}/>
+
+## Usage
+
+<Text type="mainHeading">Main Heading</Text>
+
+<CodeSnippet code={mainHeading}/>
+
+<Text type="subHeading">Sub Heading</Text>
+
+<CodeSnippet code={subHeading}/>
+
+### Regular Text
+
+<Text type="text">
+    Contrary to popular belief, Lorem Ipsum is not simply random
+    text. It has roots in a piece of classical Latin literature from
+    45 BC, making it over 2000 years old. Richard McClintock, a
+    Latin professor at Hampden-Sydney College in Virginia, looked up
+    one of the more obscure Latin words, consectetur, from a Lorem
+    Ipsum passage, and going through the cites of the word in
+    classical literature, discovered the undoubtable source.
+</Text>
+
+<CodeSnippet code={text}/>
+
+### Text Customized
+
+<Text width="18rem" height="10rem" bold center color="blue" scrollAuto>
+    Contrary to popular belief, Lorem Ipsum is not simply random
+    text. It has roots in a piece of classical Latin literature from
+    45 BC, making it over 2000 years old. Richard McClintock, a
+    Latin professor at Hampden-Sydney College in Virginia, looked up
+    one of the more obscure Latin words, consectetur, from a Lorem
+    Ipsum passage, and going through the cites of the word in
+    classical literature, discovered the undoubtable source.
+</Text>
+
+<CodeSnippet code={textCustomized}/>
+
+## Props
+
+<InlineCode>width</InlineCode>
+
+**Description**
+
+It is used to set the width of the text.
+
+**Values**
+
+String with valid width.
+
+<Divider/>
+
+<InlineCode>height</InlineCode>
+
+**Description**
+
+It is used to set the height of the text.
+
+**Values**
+
+String with valid height.
+
+<Divider/>
+
+<InlineCode>color</InlineCode>
+
+**Description**
+
+It is used to set the color of the text.
+
+**Values**
+
+"gray" | "red" | "yellow" | "blue" | "orange" | "green" | "purple" | "pink"
+
+<Divider/>
+
+<InlineCode>bold</InlineCode>
+
+**Description**
+
+It is used to make the text bold.
+
+**Values**
+
+Boolean value.
+
+<Divider/>
+
+<InlineCode>center</InlineCode>
+
+**Description**
+
+It is used to position the text in the center based on its width.
+
+**Values**
+
+Boolean value.
+
+<Divider/>
+
+## Note
+
+To learn more about customizing the components check **[customizing components](/docs/customizing-components)** in the docs for more info.
+
+</Layout>

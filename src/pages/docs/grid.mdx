@@ -1,0 +1,97 @@
+import { Layout, Divider, InlineCode, Grid, Button } from "@zeal-ui/core";
+import { CodeSnippet } from "../../components/index";
+const gridImport=`
+import { Grid } from "@zeal-ui/core";
+`;
+const grid=`
+<Grid row={2} col={3}>
+    <Button>Item 1</Button>
+    <Button>Item 2</Button>
+    <Button>Item 3</Button>
+    <Button>Item 4</Button>
+    <Button>Item 5</Button>
+    <Button>Item 6</Button>
+</Grid>
+`;
+
+<Layout title="Grid">
+
+# Grid
+
+A Grid is a two dimentional layout which is used to arrange items horizontally and vertically.
+
+<Divider/>
+
+## Import
+
+<CodeSnippet code={gridImport}/>
+
+## Usage
+
+<Grid row={2} col={3}>
+    <Button>Item 1</Button>
+    <Button>Item 2</Button>
+    <Button>Item 3</Button>
+    <Button>Item 4</Button>
+    <Button>Item 5</Button>
+    <Button>Item 6</Button>
+</Grid>
+
+<CodeSnippet code={grid}/>
+
+## Props
+
+<InlineCode>width</InlineCode>
+
+**Description**
+
+It is used to set the width of the grid.
+
+**Values**
+
+String with valid width.
+
+<Divider />
+
+<InlineCode>height</InlineCode>
+
+**Description**
+
+It is used to set the height of the grid.
+
+**Values**
+
+String with valid height.
+
+<Divider />
+
+<InlineCode>row</InlineCode>
+
+**Description**
+
+It is used to set the number of rows in the grid.
+
+**Values**
+
+Valid number.
+
+<Divider />
+
+<InlineCode>col</InlineCode>
+
+**Description**
+
+It is used to set the number of columns in the grid.
+
+**Values**
+
+Valid number.
+
+<Divider />
+
+## Note
+
+To learn more about customizing the components check **[customizing components](/docs/customizing-components)** in the docs for more info.
+
+</Layout>
+        

@@ -1,0 +1,189 @@
+import { Layout, Divider, InlineCode, SlideShow, Image } from "@zeal-ui/core";
+import { CodeSnippet } from "../../components/index";
+import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
+import ChevronRightIcon from "@material-ui/icons/ChevronRight";
+const slideShowImport = `
+import { Slideshow } from "@zeal-ui/core";
+`;
+const slideShow = `
+<SlideShow slides={["Slide 1", "Slide 2", "Slide 3"]} width="15rem" height="5rem" />
+`;
+const slideShowCustomized = `
+const trees = (
+    <Image
+        src="https://images.pexels.com/photos/1770809/pexels-photo-1770809.jpeg"
+        alt="trees"
+        width="10rem"
+        height="10rem"
+    />
+);
+const stream = (
+    <Image
+        src="https://images.pexels.com/photos/3225517/pexels-photo-3225517.jpeg"
+        alt="stream"
+        width="10rem"
+        height="10rem"
+    />
+);
+const mountains = (
+    <Image
+        src="https://images.pexels.com/photos/1785493/pexels-photo-1785493.jpeg"
+        alt="mountaines"
+        width="10rem"
+        height="10rem"
+    />
+);
+<SlideShow
+    slides={[stream, trees, mountains]}
+    width="18rem"
+    prev={<ChevronLeftIcon fontSize="large" />}
+    next={<ChevronRightIcon fontSize="large" />}
+    color="pink"
+/>
+`;
+const trees = (
+    <Image
+        src="https://images.pexels.com/photos/1770809/pexels-photo-1770809.jpeg"
+        alt="trees"
+        width="10rem"
+        height="10rem"
+    />
+);
+const stream = (
+    <Image
+        src="https://images.pexels.com/photos/3225517/pexels-photo-3225517.jpeg"
+        alt="stream"
+        width="10rem"
+        height="10rem"
+    />
+);
+const mountains = (
+    <Image
+        src="https://images.pexels.com/photos/1785493/pexels-photo-1785493.jpeg"
+        alt="mountaines"
+        width="10rem"
+        height="10rem"
+    />
+);
+
+<Layout title="Slide Show">
+
+# Slide Show
+
+<Divider />
+
+## Import
+
+<CodeSnippet code={slideShowImport} />
+
+## Usage
+
+### Slideshow
+
+<SlideShow slides={["Slide 1", "Slide 2", "Slide 3"]} width="15rem" height="5rem" />
+
+<CodeSnippet code={slideShow} />
+
+### Slideshow Customized
+
+<SlideShow
+    slides={[stream, trees, mountains]}
+    width="18rem"
+    prev={<ChevronLeftIcon fontSize="large" />}
+    next={<ChevronRightIcon fontSize="large" />}
+    color="pink"
+/>
+
+<CodeSnippet code={slideShowCustomized} />
+
+## Props
+
+<InlineCode>width</InlineCode>
+
+**Description**
+
+It is used to set the width of the slideshow.
+
+**Values**
+
+String with valid width.
+
+<Divider/>
+
+<InlineCode>height</InlineCode>
+
+**Description**
+
+It is used to set the height of the slideshow.
+
+**Values**
+
+String with valid height.
+
+<Divider/>
+
+<InlineCode>color</InlineCode>
+
+**Description**
+
+It is used to set the color of the slideshow.
+
+**Values**
+
+"gray" | "red" | "yellow" | "blue" | "orange" | "green" | "purple" | "pink"
+
+<Divider/>
+
+<InlineCode>slides</InlineCode>
+
+**Description**
+
+It is used to set the slides in the slideshow.
+
+**Values**
+
+React component.
+
+<Divider/>
+
+<InlineCode>prev</InlineCode>
+
+**Description**
+
+It is used to set the previous indicator in the slideshow.
+
+**Values**
+
+Icon or a react component.
+
+<Divider/>
+
+<InlineCode>next</InlineCode>
+
+**Description**
+
+It is used to set the next indicator in the slideshow.
+
+**Values**
+
+Icon or react component.
+
+<Divider/>
+
+<InlineCode>slidesCount</InlineCode>
+
+**Description**
+
+It is used to set the number of slides that will be shown at a time in the slideshow after which user has to click the next indicator to see more slides.
+
+**Values**
+
+Number.
+
+<Divider/>
+
+## Note
+
+To learn more about customizing the components check **[customizing components](/docs/customizing-components)** in the docs for more info.
+
+</Layout>

@@ -1,0 +1,90 @@
+import { Layout, Alert, Text, Divider, Container, InlineCode } from "@zeal-ui/core";
+import { CodeSnippet } from "../../components/index";
+import Link from "next/link";
+const alertImport = `
+import { Alert } from "@zeal-ui/core";
+`;
+const alertUsage = `
+<Alert type="success">Success ! Your message was sent successfully</Alert>
+`;
+const alertTypes = `
+<Container type="col">
+  <Alert type="success">Success ! Your message was sent successfully</Alert>
+  <Alert type="warning">Warning ! Your network connection is unstable</Alert>
+  <Alert type="danger">Error ! A problem has occurred try again later</Alert>
+  <Alert type="info">Info ! Read the instructions given carefully</Alert>
+</Container>
+`;
+
+<Layout title="Alert">
+
+# Alert
+
+<Divider />
+
+## Import
+
+<CodeSnippet code={alertImport} />
+
+## Usage
+
+### Alert
+
+<Alert type="success">Success ! Your message was sent successfully</Alert>
+
+<CodeSnippet code={alertUsage} />
+
+### Alert Types
+
+<Container type="col">
+  <Alert type="success">Success ! Your message was sent successfully</Alert>
+  <Alert type="warning">Warning ! Your network connection is unstable</Alert>
+  <Alert type="danger">Error ! A problem has occurred try again later</Alert>
+  <Alert type="info">Info ! Read the instructions given carefully</Alert>
+</Container>
+
+<CodeSnippet code={alertTypes} />
+
+## Props
+
+<InlineCode>type</InlineCode>
+
+**Description**
+
+It is used to set the type of the alert.
+
+**Values** 
+
+"success" | "info" | "warning" | "danger"
+
+<Divider/>
+
+<InlineCode>width</InlineCode>
+
+**Description**
+
+It is used to set the width of the alert.
+
+**Values**
+
+String with valid width.
+
+<Divider/>
+
+<InlineCode>height</InlineCode>
+
+**Description**
+
+It is used to set the height of the alert.
+
+**Values**
+
+String with valid height.
+
+<Divider/>
+
+## Note
+
+To learn more about customizing the components check **[customizing components](/docs/customizing-components)** in the docs for more info.
+
+</Layout>

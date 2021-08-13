@@ -1,0 +1,149 @@
+import { Layout, Divider, InlineCode, Container, Button } from "@zeal-ui/core";
+import { CodeSnippet } from "../../components/index";
+const containerImport=`
+import { Container } from "@zeal-ui/core";
+`;
+const containerRow=`
+<Container width="15rem" height="5rem" type="row" rowEven colCenter withBorder>
+    <Button>Item 1</Button>
+    <Button>Item 2</Button>
+    <Button>Item 3</Button>
+</Container>
+`;
+const containerCol=`
+<Container width="5rem" height="15rem" type="col" rowCenter colEven withBorder>
+    <Button>Item 1</Button>
+    <Button>Item 2</Button>
+    <Button>Item 3</Button>
+</Container>
+`;
+
+<Layout title="Container">
+
+# Container
+
+A container is a flexbox with one dimentional layout which is used to arrange items horizontally or vertically.
+
+The position of the items within the container can be customized based on the props provided, check **[props](#props)** section below.
+
+It can also be used to add custom styles to all the items within the container, check **[customizing components](/docs/customizing-components)** in the docs for more info.
+
+<Divider />
+
+## Import
+
+<CodeSnippet code={containerImport}/>
+
+## Usage
+
+### Container row
+
+<Container width="15rem" height="5rem" type="row" rowEven colCenter withBorder>
+    <Button>Item 1</Button>
+    <Button>Item 2</Button>
+    <Button>Item 3</Button>
+</Container>
+
+<CodeSnippet code={containerRow}/>
+
+### Container column
+
+<Container width="5rem" height="15rem" type="col" rowCenter colEven withBorder>
+    <Button>Item 1</Button>
+    <Button>Item 2</Button>
+    <Button>Item 3</Button>
+</Container>
+
+<CodeSnippet code={containerCol}/>
+
+## <section id="props">Props</section>
+
+<InlineCode>width</InlineCode>
+
+**Description**
+
+It is used to set the width of the container.
+
+**Values**
+
+String with valid width.
+
+<Divider />
+
+<InlineCode>height</InlineCode>
+
+**Description**
+
+It is used to set the height of the container.
+
+**Values**
+
+String with valid height.
+
+<Divider />
+
+<InlineCode>type</InlineCode>
+
+**Description**
+
+It is used to set the type of the container.
+
+**Values**
+
+"row" | "row-reverse" | "col" | "col-reverse"
+
+<Divider />
+
+<InlineCode>rowStart | rowEnd | rowCenter | rowBetween | rowAround | rowEven</InlineCode>
+
+**Description**
+
+It is used to set the position of the container row wise.
+
+**Values**
+
+Boolean value.
+
+<Divider />
+
+<InlineCode>colStart | colEnd | colCenter | colBetween | colAround | colEven</InlineCode>
+
+**Description**
+
+It is used to set the position of the container column wise.
+
+**Values**
+
+Boolean value.
+
+<Divider />
+
+<InlineCode>withBorder</InlineCode>
+
+**Description**
+
+It is used to add a border to the container.
+
+**Values**
+
+Boolean value.
+
+<Divider />
+
+<InlineCode>scrollAuto</InlineCode>
+
+**Description**
+
+It is used to add a scrollbar on x or y axis or both if the contents of the contianer overflows.
+
+**Values**
+
+Boolean value.
+
+<Divider />
+
+## Note
+
+To learn more about customizing the components check **[customizing components](/docs/customizing-components)** in the docs for more info.
+
+</Layout>

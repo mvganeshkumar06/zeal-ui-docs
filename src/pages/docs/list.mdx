@@ -1,0 +1,207 @@
+import { Layout, Divider, InlineCode, List, ListItem, Container } from "@zeal-ui/core";
+import { CodeSnippet } from "../../components/index";
+const listImport=`
+import { List, ListItem } from "@zeal-ui/core";
+`;
+const orderedList=`
+<List type="ol" styleType="upper-roman">
+    <ListItem>
+        There are many variations of passages of Lorem Ipsum
+        available.
+    </ListItem>
+    <ListItem>
+        The majority have suffered alteration in some form, by
+        injected humour, or randomised words.
+    </ListItem>
+    <ListItem>Which don't look even slightly believable.</ListItem>
+    <ListItem>
+        All the Lorem Ipsum generators on the Internet tend to
+        repeat predefined chunks as necessary.
+    </ListItem>
+</List>
+`;
+const unorderedList=`
+<List styleType="circle">
+    <ListItem>
+        There are many variations of passages of Lorem Ipsum
+        available.
+    </ListItem>
+    <ListItem>
+        The majority have suffered alteration in some form, by
+        injected humour, or randomised words.
+    </ListItem>
+    <ListItem>Which don't look even slightly believable.</ListItem>
+    <ListItem>
+        All the Lorem Ipsum generators on the Internet tend to
+        repeat predefined chunks as necessary.
+    </ListItem>
+</List>
+`;
+const stackedList=`
+<List type="stacked">
+    <ListItem>
+        There are many variations of passages of Lorem Ipsum
+        available.
+    </ListItem>
+    <ListItem>
+        The majority have suffered alteration in some form, by
+        injected humour, or randomised words.
+    </ListItem>
+    <ListItem>Which don't look even slightly believable.</ListItem>
+    <ListItem>
+        All the Lorem Ipsum generators on the Internet tend to
+        repeat predefined chunks as necessary.
+    </ListItem>
+</List>
+`;
+const linkedList=`
+<List type="link">
+  <ListItem>
+    All the Lorem Ipsum generators on the Internet tend to repeat predefined
+    chunks as necessary.
+  </ListItem>
+  <ListItem active>This is the active link in this list.</ListItem>
+  <ListItem>
+    The majority have suffered alteration in some form, by injected humour, or
+    randomised words.
+  </ListItem>
+  <ListItem>Which don't look even slightly believable.</ListItem>
+</List>
+`;
+
+<Layout title="List">
+
+# List
+
+<Divider />
+
+## Import
+
+<CodeSnippet code={listImport}/>
+
+## Usage
+
+### Ordered list
+
+<List type="ol" styleType="upper-roman">
+    <ListItem>
+        There are many variations of passages of Lorem Ipsum
+        available.
+    </ListItem>
+    <ListItem>
+        The majority have suffered alteration in some form, by
+        injected humour, or randomised words.
+    </ListItem>
+    <ListItem>Which don't look even slightly believable.</ListItem>
+    <ListItem>
+        All the Lorem Ipsum generators on the Internet tend to
+        repeat predefined chunks as necessary.
+    </ListItem>
+</List>
+
+<CodeSnippet code={orderedList}/>
+
+### Unordered list
+
+<List styleType="circle">
+    <ListItem>
+        There are many variations of passages of Lorem Ipsum
+        available.
+    </ListItem>
+    <ListItem>
+        The majority have suffered alteration in some form, by
+        injected humour, or randomised words.
+    </ListItem>
+    <ListItem>Which don't look even slightly believable.</ListItem>
+    <ListItem>
+        All the Lorem Ipsum generators on the Internet tend to
+        repeat predefined chunks as necessary.
+    </ListItem>
+</List>
+
+<CodeSnippet code={unorderedList}/>
+
+### Stacked list
+
+<List type="stacked">
+    <ListItem>
+        There are many variations of passages of Lorem Ipsum
+        available.
+    </ListItem>
+    <ListItem>
+        The majority have suffered alteration in some form, by
+        injected humour, or randomised words.
+    </ListItem>
+    <ListItem>Which don't look even slightly believable.</ListItem>
+    <ListItem>
+        All the Lorem Ipsum generators on the Internet tend to
+        repeat predefined chunks as necessary.
+    </ListItem>
+</List>
+
+<CodeSnippet code={stackedList}/>
+
+### List with links
+
+<List type="link">
+  <ListItem>
+    All the Lorem Ipsum generators on the Internet tend to repeat predefined
+    chunks as necessary.
+  </ListItem>
+  <ListItem active>This is the active link in this list.</ListItem>
+  <ListItem>
+    The majority have suffered alteration in some form, by injected humour, or
+    randomised words.
+  </ListItem>
+  <ListItem>Which don't look even slightly believable.</ListItem>
+</List>
+
+<CodeSnippet code={linkedList}/>
+
+## Props
+
+### List
+
+<InlineCode>type</InlineCode>
+
+**Description**
+
+It is used to set the type of the list.
+
+**Values**
+
+"ol" | "stacked" | "link"
+
+<Divider/>
+
+<InlineCode>styleType</InlineCode>
+
+**Description**
+
+It is used to set the type of the style for the list items in the ordered and unordered list.
+
+**Values**
+
+String with valid *list-style-type* value.
+
+<Divider/>
+
+### ListItem
+
+<InlineCode>active</InlineCode>
+
+**Description**
+
+It is used to set link as active.
+
+**Values**
+
+Boolean value.
+
+<Divider/>
+
+## Note
+
+To learn more about customizing the components check **[customizing components](/docs/customizing-components)** in the docs for more info.
+
+</Layout>

@@ -1,0 +1,36 @@
+import { Layout, Divider, InlineCode } from "@zeal-ui/core";
+import { CodeSnippet } from "../../components/index";
+const zealUIInstall = `
+npm i @zeal-ui/core styled-components
+`;
+const zealUIProvider = `
+import React from "react";
+import { ZealProvider } from "@zeal-ui/core";
+const App = () => {
+    return (
+        <ZealProvider>
+            <App />
+        </ZealProvider>
+    );
+};
+`;
+
+<Layout title="Getting Started">
+
+# Getting Started
+
+<Divider/>
+
+## Installation
+
+Install Zeal UI in your React project directory by executing the following command.
+
+<CodeSnippet code={zealUIInstall} disableLineNumber language="bash" />
+
+## Setting up the Provider
+
+Before working with Zeal UI, you need to set up the <InlineCode>ZealProvider</InlineCode> at the root of your application.
+
+<CodeSnippet code={zealUIProvider} />
+
+</Layout>

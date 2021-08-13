@@ -1,0 +1,160 @@
+import { Layout, Divider, Avatar, AvatarBadge, Container, InlineCode } from "@zeal-ui/core";
+import { CodeSnippet } from "../../components/index";
+const avatarImport = `
+import { Avatar, AvatarBadge } from "@zeal-ui/core";
+`;
+const avatar = `
+<Avatar src="/avatar-1.png" alt="avatar" width="5rem" height="5rem"/>
+`;
+const avatarWithBadge = `
+<Avatar
+  src="/avatar-1.png"
+  alt="avatar"
+  width="5rem"
+  height="5rem"
+  badge={<AvatarBadge color="green" width="0.75rem" height="0.75rem" />}
+/>
+`;
+const avatarGroup=`
+<Container type="row">
+  <Avatar src="/avatar-1.png" alt="avatar" width="5rem" height="5rem" />
+  <Avatar src="/avatar-2.png" alt="avatar" width="5rem" height="5rem" />
+  <Avatar src="/avatar-3.png" alt="avatar" width="5rem" height="5rem" />
+</Container>
+`;
+
+<Layout title="Avatar">
+
+# Avatar
+
+<Divider />
+
+## Import
+
+<CodeSnippet code={avatarImport} />
+
+## Usage
+
+### Avatar
+
+<Avatar src="/avatar-1.png" alt="avatar" width="5rem" height="5rem" />
+
+<CodeSnippet code={avatar} />
+
+### Avatar with Badge
+
+<Avatar
+  src="/avatar-1.png"
+  alt="avatar"
+  width="5rem"
+  height="5rem"
+  badge={<AvatarBadge color="green" width="0.75rem" height="0.75rem" />}
+/>
+
+<CodeSnippet code={avatarWithBadge} />
+
+### Avatar Group
+
+<Container type="row">
+  <Avatar src="/avatar-1.png" alt="avatar" width="5rem" height="5rem" />
+  <Avatar src="/avatar-2.png" alt="avatar" width="5rem" height="5rem" />
+  <Avatar src="/avatar-3.png" alt="avatar" width="5rem" height="5rem" />
+</Container>
+
+<CodeSnippet code={avatarGroup} />
+
+## Props
+
+### Avatar
+
+<InlineCode>src</InlineCode>
+
+**Description**
+
+It is used to set the source of the image for the avatar.
+
+**Values**
+
+Path to the image.
+
+<Divider />
+
+<InlineCode>alt</InlineCode>
+
+**Description**
+
+It is used to set the alternate text when image is not available.
+
+**Values**
+
+Text describing the image.
+
+<Divider />
+
+<InlineCode>width</InlineCode>
+
+**Description**
+
+It is used to set the width of the avatar.
+
+**Values**
+
+String with valid width.
+
+<Divider />
+
+<InlineCode>height</InlineCode>
+
+**Description**
+
+It is used to set the height of the avatar.
+
+**Values**
+
+String with valid height.
+
+<Divider />
+
+### Avatar Badge
+
+<InlineCode>color</InlineCode>
+
+**Description**
+
+It is used to set the color of the avatar badge.
+
+**Values**
+
+"gray" | "red" | "yellow" | "blue" | "orange" | "green" | "purple" | "pink"
+
+<Divider />
+
+<InlineCode>width</InlineCode>
+
+**Description**
+
+It is used to set the width of the avatar badge.
+
+**Values**
+
+String with valid width.
+
+<Divider />
+
+<InlineCode>height</InlineCode>
+
+**Description**
+
+It is used to set the height of the avatar badge.
+
+**Values**
+
+String with valid height.
+
+<Divider />
+
+## Note
+
+To learn more about customizing the components check **[customizing components](/docs/customizing-components)** in the docs for more info.
+
+</Layout>

@@ -1,0 +1,121 @@
+import { Layout, Divider, Badge, Image, InlineCode, Span } from "@zeal-ui/core";
+import { CodeSnippet } from "../../components/index";
+const badgeImport = `
+import { Badge } from "@zeal-ui/core";
+`;
+const badge = `
+<Container type="col">
+  <Badge color="green">Success</Badge>
+  <Badge color="red">Warning</Badge>
+  <Badge color="orange">New</Badge>
+</Container>
+`;
+const badgeWithIcon=`
+<Span
+  customStyles={\`
+    .icon{
+        margin-right:0.5rem;
+    }
+\`}
+>
+  <Badge width="8.5rem" height="2rem">
+    <Image
+      src="/phone.svg"
+      alt="phone-icon"
+      width="1.5rem"
+      height="1.5rem"
+      className="icon"
+    />
+    Badge with Icon
+  </Badge>
+</Span>
+`;
+
+<Layout title="Badge">
+
+# Badge
+
+<Divider />
+
+## Import
+
+<CodeSnippet code={badgeImport} />
+
+## Usage
+
+### Badge
+
+<Container type="col">
+  <Badge color="green">Success</Badge>
+  <Badge color="red">Warning</Badge>
+  <Badge color="orange">New</Badge>
+</Container>
+
+<CodeSnippet code={badge} />
+
+### Badge with Icon
+
+<Span
+  customStyles={`
+    .icon{
+        margin-right:0.5rem;
+    }
+`}
+>
+  <Badge width="8.5rem" height="2rem">
+    <Image
+      src="/phone.svg"
+      alt="phone"
+      width="1.5rem"
+      height="1.5rem"
+      className="icon"
+    />
+    Badge with Icon
+  </Badge>
+</Span>
+
+<CodeSnippet code={badgeWithIcon} />
+
+## Props
+
+<InlineCode>color</InlineCode>
+
+**Description**
+
+It is used to set the color of the badge.
+
+**Values**
+
+"gray" | "red" | "yellow" | "blue" | "orange" | "green" | "purple" | "pink"
+
+<Divider />
+
+<InlineCode>width</InlineCode>
+
+**Description**
+
+It is used to set the width of the badge.
+
+**Values**
+
+String with valid width.
+
+<Divider />
+
+<InlineCode>height</InlineCode>
+
+**Description**
+
+It is used to set the height of the badge.
+
+**Values**
+
+String with valid height.
+
+<Divider />
+
+## Note
+
+To learn more about customizing the components check **[customizing components](/docs/customizing-components)** in the docs for more info.
+
+</Layout>

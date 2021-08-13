@@ -1,0 +1,128 @@
+import { Layout, Divider, InlineCode, Menu, Container, Button, useNotify } from "@zeal-ui/core";
+import { CodeSnippet, MenuDemo } from "../../components/index";
+const menuImport=`
+import { Menu, useNotify } from "@zeal-ui/core";
+`;
+const menu=`
+const MenuDemo=()=>{
+    const { isOpen, onOpen, onClose } = useNotify();
+    return (
+        <>
+            <Button onClick={() => onOpen("MENU")}>Menu</Button>
+            <Menu isOpen={isOpen === "MENU"} onClickAway={onClose} width="15rem">
+                <List styleType="circle">
+                    <ListItem>
+                        There are many variations of passages of Lorem Ipsum
+                        available.
+                    </ListItem>
+                    <ListItem>
+                        The majority have suffered alteration in some form, by
+                        injected humour, or randomised words.
+                    </ListItem>
+                    <ListItem>Which don't look even slightly believable.</ListItem>
+                    <ListItem>
+                        All the Lorem Ipsum generators on the Internet tend to
+                        repeat predefined chunks as necessary.
+                    </ListItem>
+                </List>
+            </Menu>
+        </>
+    );
+}
+`;
+
+<Layout title="Menu">
+
+# Menu
+
+<Divider />
+
+## Import
+
+<CodeSnippet code={menuImport}/>
+
+## Usage
+
+<MenuDemo/>
+
+<CodeSnippet code={menu}/>
+
+## Props
+
+<InlineCode>width</InlineCode>
+
+**Description**
+
+It is used to set the width of the menu.
+
+**Values**
+
+String with valid width.
+
+<Divider/>
+
+<InlineCode>height</InlineCode>
+
+**Description**
+
+It is used to set the height of the menu.
+
+**Values**
+
+String with valid height.
+
+<Divider/>
+
+<InlineCode>top | right | bottom | left</InlineCode>
+
+**Description**
+
+It is used to set the position of the menu.
+
+**Values**
+
+String with valid position.
+
+<Divider/>
+
+<InlineCode>isOpen</InlineCode>
+
+**Description**
+
+It is used to decide when the menu will be opened and closed.
+
+**Values**
+
+Boolean value.
+
+<Divider/>
+
+<InlineCode>onClickAway</InlineCode>
+
+**Description**
+
+It is the function that will be called when user clicks away from the menu.
+
+**Values**
+
+Function that closes the menu.
+
+<Divider/>
+
+<InlineCode>color</InlineCode>
+
+**Description**
+
+It is used to set the color of the menu.
+
+**Values**
+
+"gray" | "red" | "yellow" | "blue" | "orange" | "green" | "purple" | "pink"
+
+<Divider/>
+
+## Note
+
+To learn more about customizing the components check **[customizing components](/docs/customizing-components)** in the docs for more info.
+
+</Layout>

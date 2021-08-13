@@ -1,0 +1,46 @@
+import { Layout, Divider, InlineCode } from "@zeal-ui/core";
+import { CodeSnippet } from "../../components/index";
+const layoutImport=`
+import { Layout } from "@zeal-ui/core";
+`;
+const layout=`
+<Layout title="myPage">
+    <h1>Page contents</h1>
+</Layout>
+`;
+
+<Layout title="Layout">
+
+# Layout
+
+It is used to set the layout of the page along with the header, sidebar (optional) and footer.
+
+<Divider/>
+
+## Import
+
+<CodeSnippet code={layoutImport}/>
+
+## Usage
+
+<CodeSnippet code={layout}/>
+
+## Props
+
+<InlineCode>title</InlineCode>
+
+**Description**
+
+It is used to set the title of the page.
+
+**Values**
+
+String.
+
+<Divider />
+
+## Note
+
+To learn more about customizing the components check **[customizing components](/docs/customizing-components)** in the docs for more info.
+
+</Layout>

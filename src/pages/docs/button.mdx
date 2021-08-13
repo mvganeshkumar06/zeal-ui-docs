@@ -1,0 +1,138 @@
+import { Layout, Divider, Button, Image, InlineCode, Span } from "@zeal-ui/core";
+import { CodeSnippet } from "../../components/index";
+const buttonImport=`
+import { Button } from "@zeal-ui/core";
+`;
+const button=`
+<Button color="blue">Button</Button>
+`;
+const buttonFloating=`
+<Button type="floating" top="5rem" right="10%">
+  Button Floating
+</Button>
+`;
+const buttonWithIcon=`
+<Span
+  customStyles={\`
+    .icon{
+        margin-right:0.5rem;
+    }
+\`}
+>
+    <Button width="10rem" height="2rem">
+        <Image src="/phone.svg" alt="phone" width="1.5rem" height="1.5rem" className="icon"/>
+        Button with Icon
+    </Button>
+</Span>
+`;
+
+<Layout title="Button">
+
+# Button
+
+<Divider />
+
+## Import
+
+<CodeSnippet code={buttonImport}/>
+
+## Usage
+
+### Button
+
+<Button color="blue">Button</Button>
+
+<CodeSnippet code={button}/>
+
+### Button Floating
+
+<Button type="floating" top="5rem" right="10%">
+  Button Floating
+</Button>
+
+<CodeSnippet code={buttonFloating}/>
+
+### Button with icon
+
+<Span
+  customStyles={`
+    .icon{
+        margin-right:0.5rem;
+    }
+`}
+>
+    <Button width="10rem" height="2rem">
+        <Image src="/phone.svg" alt="phone" width="1.5rem" height="1.5rem" className="icon"/>
+        Button with Icon
+    </Button>
+</Span>
+
+<CodeSnippet code={buttonWithIcon}/>
+
+## Props
+
+<InlineCode>width</InlineCode>
+
+**Description**
+
+It is used to set the width of the button.
+
+**Values**
+
+String with valid width.
+
+<Divider />
+
+<InlineCode>height</InlineCode>
+
+**Description**
+
+It is used to set the height of the button.
+
+**Values**
+
+String with valid height.
+
+<Divider />
+
+<InlineCode>color</InlineCode>
+
+**Description**
+
+It is used to set the color of the button.
+
+**Values**
+
+"gray" | "red" | "yellow" | "blue" | "orange" | "green" | "purple" | "pink"
+
+<Divider />
+
+<InlineCode>type</InlineCode>
+
+**Description**
+
+It is used to set the type of the button.
+
+**Values**
+
+"floating"
+
+<Divider />
+
+<InlineCode>top | right | bottom | left</InlineCode>
+
+**Description**
+
+It is used to set the position of the button when the type is set to "floating".
+
+**Values**
+
+String with valid position.
+
+<Divider />
+
+## Note
+
+To learn more about customizing the components check **[customizing components](/docs/customizing-components)** in the docs for more info.
+
+</Layout>
