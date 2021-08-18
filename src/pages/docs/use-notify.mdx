@@ -1,0 +1,47 @@
+import { Layout, Divider, InlineCode } from "@zeal-ui/core";
+import { CodeSnippet, UseNotifyDemo } from "../../components/index";
+const useNotifyImport = `
+import { useNotify } from "@zeal-ui/core";
+`;
+const useNotify = `
+const UseNotifyDemo = () => {
+    const { isOpen, onOpen, onClose } = useNotify();
+    return (
+        <Container type="col" width="100%">
+            <Button onClick={() => onOpen("TOAST_CENTER")}>
+                Toast center
+            </Button>
+            <Toast
+                type="center"
+                delay={3000}
+                isOpen={isOpen === "TOAST_CENTER"}
+                onClose={onClose}
+                color="blue"
+            >
+                <Text>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt.
+                </Text>
+            </Toast>
+        </Container>
+    );
+};
+`;
+
+<Layout title="useNotify">
+
+# useNotify
+
+<Divider />
+
+## Import
+
+<CodeSnippet code={useNotifyImport} />
+
+## Usage
+
+<UseNotifyDemo />
+
+<CodeSnippet code={useNotify} />
+
+</Layout>

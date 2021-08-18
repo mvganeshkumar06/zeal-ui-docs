@@ -1,0 +1,33 @@
+import { Layout, Divider, InlineCode } from "@zeal-ui/core";
+import { CodeSnippet, UseMediaQueryDemo } from "../../components/index";
+const useMediaQueryImport = `
+import { useMediaQuery } from "@zeal-ui/core";
+`;
+const useMediaQuery = `
+const useMediaQueryDemo = () => {
+    const [isDesktop] = useMediaQuery(["(min-width: 1024px)"]);
+    return (
+        <Badge color="purple">
+            {isDesktop ? "Rendering in a desktop" : "Rendering in a mobile"}
+        </Badge>
+    );
+};
+`;
+
+<Layout title="useMediaQuery">
+
+# useMediaQuery
+
+<Divider />
+
+## Import
+
+<CodeSnippet code={useMediaQueryImport} />
+
+## Usage
+
+<UseMediaQueryDemo />
+
+<CodeSnippet code={useMediaQuery} />
+
+</Layout>

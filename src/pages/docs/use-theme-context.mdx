@@ -1,0 +1,33 @@
+import { Layout, Divider, InlineCode } from "@zeal-ui/core";
+import { CodeSnippet, UseThemeContextDemo } from "../../components/index";
+const useThemeContextImport = `
+import { useThemeContext } from "@zeal-ui/core";
+`;
+const useThemeContext = `
+const UseThemeContextDemo = () => {
+    const { theme, toggleTheme } = useThemeContext();
+    return (
+        <Button onClick={toggleTheme}>
+            Switch to {theme === "light" ? "Dark" : "Light"} theme
+        </Button>
+    );
+};
+`;
+
+<Layout title="useThemeContext">
+
+# useThemeContext
+
+<Divider />
+
+## Import
+
+<CodeSnippet code={useThemeContextImport} />
+
+## Usage
+
+<UseThemeContextDemo />
+
+<CodeSnippet code={useThemeContext} />
+
+</Layout>

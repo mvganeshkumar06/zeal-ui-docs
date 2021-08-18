@@ -1,0 +1,41 @@
+import { Layout, Divider, InlineCode } from "@zeal-ui/core";
+import { CodeSnippet, UseStylesDemo } from "../../components/index";
+const useStylesImport = `
+import { useStyles } from "@zeal-ui/core";
+`;
+const useStyles = `
+const UseStylesDemo = () => {
+    const styles = useStyles((style, theme) => \`
+        background-color:\${
+          theme === "light" ? style.colors.blue[2] : style.colors.blue[3]
+        }; 
+        :hover{
+            background-color:\${
+              theme === "light" ? style.colors.red[2] : style.colors.red[3]
+            };     
+        }
+        font-size:1.25rem;
+    \`);
+    return (
+        <Button width="10rem" customStyles={styles}>Custom Button</Button>
+    );
+};
+`;
+
+<Layout title="useStyles">
+
+# useStyles
+
+<Divider />
+
+## Import
+
+<CodeSnippet code={useStylesImport} />
+
+## Usage
+
+<UseStylesDemo />
+
+<CodeSnippet code={useStyles} />
+
+</Layout>
