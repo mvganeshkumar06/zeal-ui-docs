@@ -110,7 +110,7 @@ const Home = () => {
                 </Container>
             </Container>
             <Container type="col" rowCenter colCenter className="footer">
-                <Text type="text">
+                <Text>
                     Made with <FavoriteIcon className="heartIcon" />
                     by Ganesh Kumar
                 </Text>
