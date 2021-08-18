@@ -84,6 +84,10 @@ const sidebarContents = {
                 {
                     item: "Slideshow",
                     to: "/docs/slideshow",
+                },
+                {
+                    item: "Toast",
+                    to: "/docs/toast",
                 }
             ]
         },
@@ -109,6 +113,31 @@ const sidebarContents = {
                 {
                     item: "Text",
                     to: "/docs/text",
+                },
+                {
+                    item: "Theme Switch",
+                    to: "/docs/theme-switch",
+                }
+            ]
+        },
+        {
+            label: "Hooks",
+            items: [
+                {
+                    item: "useMediaQuery",
+                    to: "/docs/use-media-query",
+                },
+                {
+                    item: "useNotify",
+                    to: "/docs/use-notify",
+                },
+                {
+                    item: "useStyles",
+                    to: "/docs/use-styles",
+                },
+                {
+                    item: "useThemeContext",
+                    to: "/docs/use-theme-context",
                 }
             ]
         }
