@@ -1,13 +1,166 @@
 import { Layout, Divider, InlineCode } from "@zeal-ui/core";
-import { CodeSnippet } from "../../components/index";
+import { CodeSnippet, ToastDemo } from "../../components/index";
+const toastImport = `
+import { Toast, useNotify } from "@zeal-ui/core";
+`;
+const toast = `
+const ToastDemo = () => {
+    const { isOpen, onOpen, onClose } = useNotify();
+    return (
+        <Container type="col" width="100%">
+            <Container type="col">
+                <Button onClick={() => onOpen("TOAST_LEFT")}>
+                    Toast left
+                </Button>
+                <Button onClick={() => onOpen("TOAST_CENTER")}>
+                    Toast center
+                </Button>
+                <Button onClick={() => onOpen("TOAST_RIGHT")}>
+                    Toast right
+                </Button>
+            </Container>
+            <Toast
+                type="left"
+                delay={3000}
+                isOpen={isOpen === "TOAST_LEFT"}
+                onClose={onClose}
+                color="blue"
+            >
+                <Text>
+                    Lorem ipsum dolor sit amet.
+                </Text>
+            </Toast>
+            <Toast
+                type="center"
+                delay={3000}
+                isOpen={isOpen === "TOAST_CENTER"}
+                onClose={onClose}
+                color="blue"
+            >
+                <Text>
+                    Lorem ipsum dolor sit amet.
+                </Text>
+            </Toast>
+            <Toast
+                type="right"
+                delay={3000}
+                isOpen={isOpen === "TOAST_RIGHT"}
+                onClose={onClose}
+                color="blue"
+            >
+                <Text>
+                    Lorem ipsum dolor sit amet.
+                </Text>
+            </Toast>
+        </Container>
+    );
+};
+`;
 
-
-<Layout title="toast">
+<Layout title="Toast">
 
 # Toast
 
-<Divider/>
+<Divider />
 
-## TODO
+## Import
+
+<CodeSnippet code={toastImport} />
+
+## Usage
+
+<ToastDemo />
+
+<CodeSnippet code={toast} />
+
+## Props
+
+<InlineCode>width</InlineCode>
+
+**Description**
+
+It is used to set the width of the toast.
+
+**Values**
+
+String with valid width.
+
+<Divider />
+
+<InlineCode>height</InlineCode>
+
+**Description**
+
+It is used to set the height of the toast.
+
+**Values**
+
+String with valid height.
+
+<Divider />
+
+<InlineCode>isOpen</InlineCode>
+
+**Description**
+
+It is used to decide when the toast will be opened or closed.
+
+**Values**
+
+Boolean value.
+
+<Divider />
+
+<InlineCode>onClose</InlineCode>
+
+**Description**
+
+It is the function that closes the toast after the delay.
+
+**Values**
+
+Function that closes the toast.
+
+<Divider />
+
+<InlineCode>delay</InlineCode>
+
+**Description**
+
+It is the duration after which the toast gets closed.
+
+**Values**
+
+Number representing time in ms.
+
+<Divider />
+
+<InlineCode>type</InlineCode>
+
+**Description**
+
+It is used to set the type of the toast.
+
+**Values**
+
+"left" | "center" | "right"
+
+<Divider />
+
+<InlineCode>color</InlineCode>
+
+**Description**
+
+It is used to set the color of the toast.
+
+**Values**
+
+"gray" | "red" | "yellow" | "blue" | "orange" | "green" | "purple" | "pink"
+
+<Divider />
+
+## Note
+
+To learn more about customizing the components check **[customizing components](/docs/customizing-components)** in the docs for more info.
 
 </Layout>

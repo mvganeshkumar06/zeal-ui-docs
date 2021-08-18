@@ -1,17 +1,24 @@
-import { Layout, Divider, Button, Image, InlineCode, Span } from "@zeal-ui/core";
+import {
+  Layout,
+  Divider,
+  Button,
+  Image,
+  InlineCode,
+  Span,
+} from "@zeal-ui/core";
 import { CodeSnippet } from "../../components/index";
-const buttonImport=`
+const buttonImport = `
 import { Button } from "@zeal-ui/core";
 `;
-const button=`
+const button = `
 <Button color="blue">Button</Button>
 `;
-const buttonFloating=`
+const buttonFloating = `
 <Button type="floating" top="5rem" right="10%">
   Button Floating
 </Button>
 `;
-const buttonWithIcon=`
+const buttonWithIcon = `
 <Span
   customStyles={\`
     .icon{
@@ -19,10 +26,16 @@ const buttonWithIcon=`
     }
 \`}
 >
-    <Button width="10rem" height="2rem">
-        <Image src="/phone.svg" alt="phone" width="1.5rem" height="1.5rem" className="icon"/>
-        Button with Icon
-    </Button>
+  <Button width="10rem" height="2rem">
+    <Image
+      src="/phone.svg"
+      alt="phone"
+      width="1.5rem"
+      height="1.5rem"
+      className="icon"
+    />
+    Button with Icon
+  </Button>
 </Span>
 `;
 
@@ -34,7 +47,7 @@ const buttonWithIcon=`
 
 ## Import
 
-<CodeSnippet code={buttonImport}/>
+<CodeSnippet code={buttonImport} />
 
 ## Usage
 
@@ -42,7 +55,7 @@ const buttonWithIcon=`
 
 <Button color="blue">Button</Button>
 
-<CodeSnippet code={button}/>
+<CodeSnippet code={button} />
 
 ### Button Floating
 
@@ -50,9 +63,9 @@ const buttonWithIcon=`
   Button Floating
 </Button>
 
-<CodeSnippet code={buttonFloating}/>
+<CodeSnippet code={buttonFloating} />
 
-### Button with icon
+### Button with Icon
 
 <Span
   customStyles={`
@@ -61,13 +74,19 @@ const buttonWithIcon=`
     }
 `}
 >
-    <Button width="10rem" height="2rem">
-        <Image src="/phone.svg" alt="phone" width="1.5rem" height="1.5rem" className="icon"/>
-        Button with Icon
-    </Button>
+  <Button width="10rem" height="2rem">
+    <Image
+      src="/phone.svg"
+      alt="phone"
+      width="1.5rem"
+      height="1.5rem"
+      className="icon"
+    />
+    Button with Icon
+  </Button>
 </Span>
 
-<CodeSnippet code={buttonWithIcon}/>
+<CodeSnippet code={buttonWithIcon} />
 
 ## Props
 

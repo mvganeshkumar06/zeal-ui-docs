@@ -1,6 +1,10 @@
 import { Layout, Divider, InlineCode } from "@zeal-ui/core";
-import { CodeSnippet, CustomButton, CustomComponents } from "../../components/index";
-const customizingIndividualComponents=`
+import {
+  CodeSnippet,
+  CustomButton,
+  CustomComponents,
+} from "../../components/index";
+const customizingIndividualComponents = `
 import { Button, useStyles } from "@zeal-ui/core";
 const CustomButton = () => {
     const styles = useStyles((style, theme) => \`
@@ -15,7 +19,7 @@ const CustomButton = () => {
     );
 };
 `;
-const customizingMultipleComponents=`
+const customizingMultipleComponents = `
 import { Container, useStyles, Text, Button } from "@zeal-ui/core";
 const CustomComponents = () => {
     const styles = useStyles((style, theme) => \`
@@ -60,16 +64,16 @@ There are two ways to customize Zeal UI components.
 
 Every component receives a <InlineCode>customStyles</InlineCode> prop and you can pass your css to it customize them. Let's see an example below.
 
-<CustomButton/>
+<CustomButton />
 
-<CodeSnippet code={customizingIndividualComponents}/>
+<CodeSnippet code={customizingIndividualComponents} />
 
 ## 2. Customizing multiple components within a page
 
 To customize multiple components we can pass the css to the <InlineCode>customStyles</InlineCode> prop of the container component. Let's see an example below.
 
-<CustomComponents/>
+<CustomComponents />
 
-<CodeSnippet code={customizingMultipleComponents}/>
+<CodeSnippet code={customizingMultipleComponents} />
 
 </Layout>

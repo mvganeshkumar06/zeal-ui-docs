@@ -1,9 +1,17 @@
-import { Layout, Divider, InlineCode, Menu, Container, Button, useNotify } from "@zeal-ui/core";
+import {
+  Layout,
+  Divider,
+  InlineCode,
+  Menu,
+  Container,
+  Button,
+  useNotify,
+} from "@zeal-ui/core";
 import { CodeSnippet, MenuDemo } from "../../components/index";
-const menuImport=`
+const menuImport = `
 import { Menu, useNotify } from "@zeal-ui/core";
 `;
-const menu=`
+const menu = `
 const MenuDemo=()=>{
     const { isOpen, onOpen, onClose } = useNotify();
     return (
@@ -39,13 +47,13 @@ const MenuDemo=()=>{
 
 ## Import
 
-<CodeSnippet code={menuImport}/>
+<CodeSnippet code={menuImport} />
 
 ## Usage
 
-<MenuDemo/>
+<MenuDemo />
 
-<CodeSnippet code={menu}/>
+<CodeSnippet code={menu} />
 
 ## Props
 
@@ -59,7 +67,7 @@ It is used to set the width of the menu.
 
 String with valid width.
 
-<Divider/>
+<Divider />
 
 <InlineCode>height</InlineCode>
 
@@ -71,7 +79,7 @@ It is used to set the height of the menu.
 
 String with valid height.
 
-<Divider/>
+<Divider />
 
 <InlineCode>top | right | bottom | left</InlineCode>
 
@@ -83,7 +91,7 @@ It is used to set the position of the menu.
 
 String with valid position.
 
-<Divider/>
+<Divider />
 
 <InlineCode>isOpen</InlineCode>
 
@@ -95,7 +103,7 @@ It is used to decide when the menu will be opened and closed.
 
 Boolean value.
 
-<Divider/>
+<Divider />
 
 <InlineCode>onClickAway</InlineCode>
 
@@ -107,7 +115,7 @@ It is the function that will be called when user clicks away from the menu.
 
 Function that closes the menu.
 
-<Divider/>
+<Divider />
 
 <InlineCode>color</InlineCode>
 
@@ -119,7 +127,7 @@ It is used to set the color of the menu.
 
 "gray" | "red" | "yellow" | "blue" | "orange" | "green" | "purple" | "pink"
 
-<Divider/>
+<Divider />
 
 ## Note
 

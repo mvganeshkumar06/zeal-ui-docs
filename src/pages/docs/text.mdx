@@ -1,16 +1,16 @@
 import { Layout, Divider, InlineCode, Text } from "@zeal-ui/core";
 import { CodeSnippet } from "../../components/index";
-const textImport=`
+const textImport = `
 import { Text } from "@zeal-ui/core";
 `;
-const mainHeading=`
+const mainHeading = `
 <Text type="mainHeading">Main Heading</Text>
 `;
-const subHeading=`
+const subHeading = `
 <Text type="subHeading">Sub Heading</Text>
 `;
-const text=`
-<Text type="text">
+const text = `
+<Text>
     Contrary to popular belief, Lorem Ipsum is not simply random
     text. It has roots in a piece of classical Latin literature from
     45 BC, making it over 2000 years old. Richard McClintock, a
@@ -20,7 +20,7 @@ const text=`
     classical literature, discovered the undoubtable source.
 </Text>
 `;
-const textCustomized=`
+const textCustomized = `
 <Text width="15rem" height="10rem" bold center color="blue" scrollAuto>
     Contrary to popular belief, Lorem Ipsum is not simply random
     text. It has roots in a piece of classical Latin literature from
@@ -40,45 +40,43 @@ const textCustomized=`
 
 ## Import
 
-<CodeSnippet code={textImport}/>
+<CodeSnippet code={textImport} />
 
 ## Usage
 
 <Text type="mainHeading">Main Heading</Text>
 
-<CodeSnippet code={mainHeading}/>
+<CodeSnippet code={mainHeading} />
 
 <Text type="subHeading">Sub Heading</Text>
 
-<CodeSnippet code={subHeading}/>
+<CodeSnippet code={subHeading} />
 
 ### Regular Text
 
-<Text type="text">
-    Contrary to popular belief, Lorem Ipsum is not simply random
-    text. It has roots in a piece of classical Latin literature from
-    45 BC, making it over 2000 years old. Richard McClintock, a
-    Latin professor at Hampden-Sydney College in Virginia, looked up
-    one of the more obscure Latin words, consectetur, from a Lorem
-    Ipsum passage, and going through the cites of the word in
-    classical literature, discovered the undoubtable source.
+<Text>
+  Contrary to popular belief, Lorem Ipsum is not simply random text. It has
+  roots in a piece of classical Latin literature from 45 BC, making it over 2000
+  years old. Richard McClintock, a Latin professor at Hampden-Sydney College in
+  Virginia, looked up one of the more obscure Latin words, consectetur, from a
+  Lorem Ipsum passage, and going through the cites of the word in classical
+  literature, discovered the undoubtable source.
 </Text>
 
-<CodeSnippet code={text}/>
+<CodeSnippet code={text} />
 
 ### Text Customized
 
 <Text width="18rem" height="10rem" bold center color="blue" scrollAuto>
-    Contrary to popular belief, Lorem Ipsum is not simply random
-    text. It has roots in a piece of classical Latin literature from
-    45 BC, making it over 2000 years old. Richard McClintock, a
-    Latin professor at Hampden-Sydney College in Virginia, looked up
-    one of the more obscure Latin words, consectetur, from a Lorem
-    Ipsum passage, and going through the cites of the word in
-    classical literature, discovered the undoubtable source.
+  Contrary to popular belief, Lorem Ipsum is not simply random text. It has
+  roots in a piece of classical Latin literature from 45 BC, making it over 2000
+  years old. Richard McClintock, a Latin professor at Hampden-Sydney College in
+  Virginia, looked up one of the more obscure Latin words, consectetur, from a
+  Lorem Ipsum passage, and going through the cites of the word in classical
+  literature, discovered the undoubtable source.
 </Text>
 
-<CodeSnippet code={textCustomized}/>
+<CodeSnippet code={textCustomized} />
 
 ## Props
 
@@ -92,7 +90,7 @@ It is used to set the width of the text.
 
 String with valid width.
 
-<Divider/>
+<Divider />
 
 <InlineCode>height</InlineCode>
 
@@ -104,7 +102,7 @@ It is used to set the height of the text.
 
 String with valid height.
 
-<Divider/>
+<Divider />
 
 <InlineCode>color</InlineCode>
 
@@ -116,7 +114,7 @@ It is used to set the color of the text.
 
 "gray" | "red" | "yellow" | "blue" | "orange" | "green" | "purple" | "pink"
 
-<Divider/>
+<Divider />
 
 <InlineCode>bold</InlineCode>
 
@@ -128,7 +126,7 @@ It is used to make the text bold.
 
 Boolean value.
 
-<Divider/>
+<Divider />
 
 <InlineCode>center</InlineCode>
 
@@ -140,7 +138,7 @@ It is used to position the text in the center based on its width.
 
 Boolean value.
 
-<Divider/>
+<Divider />
 
 ## Note
 

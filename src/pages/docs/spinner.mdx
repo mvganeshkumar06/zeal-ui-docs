@@ -1,12 +1,19 @@
-import { Layout, Divider, InlineCode, Spinner, Container, Text } from "@zeal-ui/core";
+import {
+  Layout,
+  Divider,
+  InlineCode,
+  Spinner,
+  Container,
+  Text,
+} from "@zeal-ui/core";
 import { CodeSnippet } from "../../components/index";
-const spinnerImport=`
+const spinnerImport = `
 import { Spinner } from "@zeal-ui/core";
 `;
-const spinner=`
+const spinner = `
 <Spinner />
 `;
-const spinnerCustomized=`
+const spinnerCustomized = `
 <Spinner width="5rem" height="5rem" color="blue"/>
 `;
 
@@ -16,9 +23,9 @@ const spinnerCustomized=`
 
 <Divider />
 
-## Import 
+## Import
 
-<CodeSnippet code={spinnerImport}/>
+<CodeSnippet code={spinnerImport} />
 
 ## Usage
 
@@ -26,13 +33,13 @@ const spinnerCustomized=`
 
 <Spinner />
 
-<CodeSnippet code={spinner}/>
+<CodeSnippet code={spinner} />
 
 ### Spinner Customized
 
-<Spinner width="5rem" height="5rem" color="blue"/>
+<Spinner width="5rem" height="5rem" color="blue" />
 
-<CodeSnippet code={spinnerCustomized}/>
+<CodeSnippet code={spinnerCustomized} />
 
 ## Props
 
@@ -46,7 +53,7 @@ It is used to set the width of the spinner.
 
 String with valid width.
 
-<Divider/>
+<Divider />
 
 <InlineCode>height</InlineCode>
 
@@ -58,7 +65,7 @@ It is used to set the height of the spinner.
 
 String with valid height.
 
-<Divider/>
+<Divider />
 
 <InlineCode>color</InlineCode>
 
@@ -70,7 +77,7 @@ It is used to set the color of the spinner.
 
 "gray" | "red" | "yellow" | "blue" | "orange" | "green" | "purple" | "pink"
 
-<Divider/>
+<Divider />
 
 ## Note
 

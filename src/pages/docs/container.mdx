@@ -1,16 +1,16 @@
 import { Layout, Divider, InlineCode, Container, Button } from "@zeal-ui/core";
 import { CodeSnippet } from "../../components/index";
-const containerImport=`
+const containerImport = `
 import { Container } from "@zeal-ui/core";
 `;
-const containerRow=`
+const containerRow = `
 <Container width="15rem" height="5rem" type="row" rowEven colCenter withBorder>
     <Button>Item 1</Button>
     <Button>Item 2</Button>
     <Button>Item 3</Button>
 </Container>
 `;
-const containerCol=`
+const containerCol = `
 <Container width="5rem" height="15rem" type="col" rowCenter colEven withBorder>
     <Button>Item 1</Button>
     <Button>Item 2</Button>
@@ -32,29 +32,29 @@ It can also be used to add custom styles to all the items within the container, 
 
 ## Import
 
-<CodeSnippet code={containerImport}/>
+<CodeSnippet code={containerImport} />
 
 ## Usage
 
 ### Container row
 
 <Container width="15rem" height="5rem" type="row" rowEven colCenter withBorder>
-    <Button>Item 1</Button>
-    <Button>Item 2</Button>
-    <Button>Item 3</Button>
+  <Button>Item 1</Button>
+  <Button>Item 2</Button>
+  <Button>Item 3</Button>
 </Container>
 
-<CodeSnippet code={containerRow}/>
+<CodeSnippet code={containerRow} />
 
 ### Container column
 
 <Container width="5rem" height="15rem" type="col" rowCenter colEven withBorder>
-    <Button>Item 1</Button>
-    <Button>Item 2</Button>
-    <Button>Item 3</Button>
+  <Button>Item 1</Button>
+  <Button>Item 2</Button>
+  <Button>Item 3</Button>
 </Container>
 
-<CodeSnippet code={containerCol}/>
+<CodeSnippet code={containerCol} />
 
 ## <section id="props">Props</section>
 
@@ -94,7 +94,9 @@ It is used to set the type of the container.
 
 <Divider />
 
-<InlineCode>rowStart | rowEnd | rowCenter | rowBetween | rowAround | rowEven</InlineCode>
+<InlineCode>
+  rowStart | rowEnd | rowCenter | rowBetween | rowAround | rowEven
+</InlineCode>
 
 **Description**
 
@@ -106,7 +108,9 @@ Boolean value.
 
 <Divider />
 
-<InlineCode>colStart | colEnd | colCenter | colBetween | colAround | colEven</InlineCode>
+<InlineCode>
+  colStart | colEnd | colCenter | colBetween | colAround | colEven
+</InlineCode>
 
 **Description**
 

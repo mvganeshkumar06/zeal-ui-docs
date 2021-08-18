@@ -42,28 +42,28 @@ const mountains = (
 />
 `;
 const trees = (
-    <Image
-        src="https://images.pexels.com/photos/1770809/pexels-photo-1770809.jpeg"
-        alt="trees"
-        width="10rem"
-        height="10rem"
-    />
+  <Image
+    src="https://images.pexels.com/photos/1770809/pexels-photo-1770809.jpeg"
+    alt="trees"
+    width="10rem"
+    height="10rem"
+  />
 );
 const stream = (
-    <Image
-        src="https://images.pexels.com/photos/3225517/pexels-photo-3225517.jpeg"
-        alt="stream"
-        width="10rem"
-        height="10rem"
-    />
+  <Image
+    src="https://images.pexels.com/photos/3225517/pexels-photo-3225517.jpeg"
+    alt="stream"
+    width="10rem"
+    height="10rem"
+  />
 );
 const mountains = (
-    <Image
-        src="https://images.pexels.com/photos/1785493/pexels-photo-1785493.jpeg"
-        alt="mountaines"
-        width="10rem"
-        height="10rem"
-    />
+  <Image
+    src="https://images.pexels.com/photos/1785493/pexels-photo-1785493.jpeg"
+    alt="mountaines"
+    width="10rem"
+    height="10rem"
+  />
 );
 
 <Layout title="Slide Show">
@@ -80,18 +80,22 @@ const mountains = (
 
 ### Slideshow
 
-<SlideShow slides={["Slide 1", "Slide 2", "Slide 3"]} width="15rem" height="5rem" />
+<SlideShow
+  slides={["Slide 1", "Slide 2", "Slide 3"]}
+  width="15rem"
+  height="5rem"
+/>
 
 <CodeSnippet code={slideShow} />
 
 ### Slideshow Customized
 
 <SlideShow
-    slides={[stream, trees, mountains]}
-    width="18rem"
-    prev={<ChevronLeftIcon fontSize="large" />}
-    next={<ChevronRightIcon fontSize="large" />}
-    color="pink"
+  slides={[stream, trees, mountains]}
+  width="18rem"
+  prev={<ChevronLeftIcon fontSize="large" />}
+  next={<ChevronRightIcon fontSize="large" />}
+  color="pink"
 />
 
 <CodeSnippet code={slideShowCustomized} />
@@ -108,7 +112,7 @@ It is used to set the width of the slideshow.
 
 String with valid width.
 
-<Divider/>
+<Divider />
 
 <InlineCode>height</InlineCode>
 
@@ -120,7 +124,7 @@ It is used to set the height of the slideshow.
 
 String with valid height.
 
-<Divider/>
+<Divider />
 
 <InlineCode>color</InlineCode>
 
@@ -132,7 +136,7 @@ It is used to set the color of the slideshow.
 
 "gray" | "red" | "yellow" | "blue" | "orange" | "green" | "purple" | "pink"
 
-<Divider/>
+<Divider />
 
 <InlineCode>slides</InlineCode>
 
@@ -144,7 +148,7 @@ It is used to set the slides in the slideshow.
 
 React component.
 
-<Divider/>
+<Divider />
 
 <InlineCode>prev</InlineCode>
 
@@ -156,7 +160,7 @@ It is used to set the previous indicator in the slideshow.
 
 Icon or a react component.
 
-<Divider/>
+<Divider />
 
 <InlineCode>next</InlineCode>
 
@@ -168,7 +172,7 @@ It is used to set the next indicator in the slideshow.
 
 Icon or react component.
 
-<Divider/>
+<Divider />
 
 <InlineCode>slidesCount</InlineCode>
 
@@ -180,7 +184,7 @@ It is used to set the number of slides that will be shown at a time in the slide
 
 Number.
 
-<Divider/>
+<Divider />
 
 ## Note
 
