@@ -21,10 +21,10 @@ Check out the documentation [here](https://zeal-ui.netlify.app/).
 
 ## Features
 
--   Reusable and customizable components
--   Powered by styled components
--   Built in Dark mode support
--   Responsive mobile first design
+- Reusable and customizable components
+- Powered by styled components
+- Built in Dark mode support
+- Responsive mobile first design
 
 <br />
 
