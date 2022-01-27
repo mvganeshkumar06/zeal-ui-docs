@@ -1,46 +1,42 @@
 {
-	"name": "zeal-ui-docs",
-	"version": "1.0.0",
-	"private": true,
-	"dependencies": {
-		"@material-ui/core": "^4.12.3",
-		"@material-ui/icons": "^4.11.2",
-		"@mdx-js/loader": "^1.6.22",
-		"@next/mdx": "^12.0.8",
-		"@zeal-ui/core": "^2.0.7",
-		"next": "^12.0.8",
-		"postcss": "^8.4.5",
-		"prettier": "^2.5.1",
-		"prism-react-renderer": "^1.2.1",
-		"react": "^17.0.2",
-		"react-dom": "^17.0.2",
-		"react-live": "^2.2.3",
-		"styled-components": "^5.3.3"
-	},
-	"scripts": {
-		"dev": "next dev",
-		"build": "next build",
-		"start": "next start"
-	},
-	"eslintConfig": {
-		"extends": [
-			"react-app",
-			"react-app/jest"
-		]
-	},
-	"browserslist": {
-		"production": [
-			">0.2%",
-			"not dead",
-			"not op_mini all"
-		],
-		"development": [
-			"last 1 chrome version",
-			"last 1 firefox version",
-			"last 1 safari version"
-		]
-	},
-	"devDependencies": {
-		"babel-plugin-styled-components": "^2.0.2"
-	}
+    "name": "zeal-ui-docs",
+    "version": "1.0.0",
+    "private": true,
+    "dependencies": {
+        "@material-ui/core": "^4.12.3",
+        "@material-ui/icons": "^4.11.2",
+        "@mdx-js/loader": "^1.6.22",
+        "@next/mdx": "^12.0.8",
+        "@zeal-ui/core": "^2.0.7",
+        "next": "^12.0.8",
+        "postcss": "^8.4.5",
+        "prettier": "^2.5.1",
+        "prism-react-renderer": "^1.2.1",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "react-live": "^2.2.3",
+        "styled-components": "^5.3.3"
+    },
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start"
+    },
+    "eslintConfig": {},
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "babel-plugin-styled-components": "^2.0.2",
+        "eslint": "^8.7.0"
+    }
 }
