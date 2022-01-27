@@ -1,33 +1,31 @@
-import { Layout, Divider, InlineCode } from "@zeal-ui/core";
-import { CodeSnippet } from "../../components/index";
-const dividerImport = `
-import { Divider } from "@zeal-ui/core";
-`;
-const dividerCustomized = `
-<Divider width="15rem" height="0.25rem" color="orange"/>
-`;
-
-<Layout title="Divider">
+import { CodeBlock } from '../../components';
 
 # Divider
 
-A divider is a horizontal line which is used to separate different sections of a content.
+-   A divider is a horizontal line which is used to separate different sections of a content.
 
-<Divider />
+---
 
 ## Import
 
-<CodeSnippet code={dividerImport} />
+<CodeBlock
+    code={`
+import { Divider } from '@zeal-ui/core';
+    `}
+/>
 
 ## Usage
 
-<Divider width="15rem" height="0.25rem" color="orange" />
-
-<CodeSnippet code={dividerCustomized} />
+<CodeBlock
+    code={`
+<Divider width="15rem" height="0.125rem" color="warning"/>
+    `}
+    live
+/>
 
 ## Props
 
-<InlineCode>width</InlineCode>
+`width`
 
 **Description**
 
@@ -37,9 +35,7 @@ It is used to set the width of the divider.
 
 String with valid width.
 
-<Divider />
-
-<InlineCode>height</InlineCode>
+`height`
 
 **Description**
 
@@ -49,9 +45,7 @@ It is used to set the height of the divider.
 
 String with valid height.
 
-<Divider />
-
-<InlineCode>color</InlineCode>
+`color`
 
 **Description**
 
@@ -59,12 +53,8 @@ It is used to set the color of the divider.
 
 **Values**
 
-"gray" | "red" | "yellow" | "blue" | "orange" | "green" | "purple" | "pink"
-
-<Divider />
+primary | secondary | accent | error | warning | success
 
 ## Note
 
-To learn more about customizing the components check **[customizing components](/docs/customizing-components)** in the docs for more info.
-
-</Layout>
+To learn about customizing the components check this **[section](/docs/customizing-components)** of the docs.

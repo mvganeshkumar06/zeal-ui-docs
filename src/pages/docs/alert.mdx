@@ -1,60 +1,39 @@
-import {
-  Layout,
-  Alert,
-  Text,
-  Divider,
-  Container,
-  InlineCode,
-} from "@zeal-ui/core";
-import { CodeSnippet } from "../../components/index";
-import Link from "next/link";
-const alertImport = `
-import { Alert } from "@zeal-ui/core";
-`;
-const alertUsage = `
-<Alert type="success">Success ! Your message was sent successfully</Alert>
-`;
-const alertTypes = `
-<Container type="col">
-  <Alert type="success">Success ! Your message was sent successfully</Alert>
-  <Alert type="warning">Warning ! Your network connection is unstable</Alert>
-  <Alert type="danger">Error ! A problem has occurred try again later</Alert>
-  <Alert type="info">Info ! Read the instructions given carefully</Alert>
-</Container>
-`;
-
-<Layout title="Alert">
+import { CodeBlock } from '../../components';
 
 # Alert
 
-<Divider />
+---
 
 ## Import
 
-<CodeSnippet code={alertImport} />
+<CodeBlock
+    code={`
+import { Alert } from '@zeal-ui/core';
+	`}
+/>
 
 ## Usage
 
-### Alert
-
-<Alert type="success">Success ! Your message was sent successfully</Alert>
-
-<CodeSnippet code={alertUsage} />
-
-### Alert Types
-
+<CodeBlock
+    code={`
 <Container type="col">
-  <Alert type="success">Success ! Your message was sent successfully</Alert>
-  <Alert type="warning">Warning ! Your network connection is unstable</Alert>
-  <Alert type="danger">Error ! A problem has occurred try again later</Alert>
-  <Alert type="info">Info ! Read the instructions given carefully</Alert>
+	<Alert type="error">
+		<Text>A problem has occurred try again later</Text>
+	</Alert>
+	<Alert type="warning">
+		<Text>Your network connection is unstable</Text>
+	</Alert>
+	<Alert type="success">
+		<Text>Your message was sent successfully</Text>
+	</Alert>
 </Container>
-
-<CodeSnippet code={alertTypes} />
+	`}
+    live
+/>
 
 ## Props
 
-<InlineCode>type</InlineCode>
+`type`
 
 **Description**
 
@@ -62,11 +41,9 @@ It is used to set the type of the alert.
 
 **Values**
 
-"success" | "info" | "warning" | "danger"
+error | warning | success
 
-<Divider />
-
-<InlineCode>width</InlineCode>
+`width`
 
 **Description**
 
@@ -76,9 +53,7 @@ It is used to set the width of the alert.
 
 String with valid width.
 
-<Divider />
-
-<InlineCode>height</InlineCode>
+`height`
 
 **Description**
 
@@ -88,10 +63,6 @@ It is used to set the height of the alert.
 
 String with valid height.
 
-<Divider />
-
 ## Note
 
-To learn more about customizing the components check **[customizing components](/docs/customizing-components)** in the docs for more info.
-
-</Layout>
+To learn about customizing the components check this **[section](/docs/customizing-components)** of the docs.

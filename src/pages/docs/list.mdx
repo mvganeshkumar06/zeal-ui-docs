@@ -1,172 +1,106 @@
-import {
-  Layout,
-  Divider,
-  InlineCode,
-  List,
-  ListItem,
-  Container,
-} from "@zeal-ui/core";
-import { CodeSnippet } from "../../components/index";
-const listImport = `
-import { List, ListItem } from "@zeal-ui/core";
-`;
-const orderedList = `
-<List type="ol" styleType="upper-roman">
-    <ListItem>
-        There are many variations of passages of Lorem Ipsum
-        available.
-    </ListItem>
-    <ListItem>
-        The majority have suffered alteration in some form, by
-        injected humour, or randomised words.
-    </ListItem>
-    <ListItem>Which don't look even slightly believable.</ListItem>
-    <ListItem>
-        All the Lorem Ipsum generators on the Internet tend to
-        repeat predefined chunks as necessary.
-    </ListItem>
-</List>
-`;
-const unorderedList = `
-<List styleType="circle">
-    <ListItem>
-        There are many variations of passages of Lorem Ipsum
-        available.
-    </ListItem>
-    <ListItem>
-        The majority have suffered alteration in some form, by
-        injected humour, or randomised words.
-    </ListItem>
-    <ListItem>Which don't look even slightly believable.</ListItem>
-    <ListItem>
-        All the Lorem Ipsum generators on the Internet tend to
-        repeat predefined chunks as necessary.
-    </ListItem>
-</List>
-`;
-const stackedList = `
-<List type="stacked">
-    <ListItem>
-        There are many variations of passages of Lorem Ipsum
-        available.
-    </ListItem>
-    <ListItem>
-        The majority have suffered alteration in some form, by
-        injected humour, or randomised words.
-    </ListItem>
-    <ListItem>Which don't look even slightly believable.</ListItem>
-    <ListItem>
-        All the Lorem Ipsum generators on the Internet tend to
-        repeat predefined chunks as necessary.
-    </ListItem>
-</List>
-`;
-const linkedList = `
-<List type="link">
-  <ListItem>
-    All the Lorem Ipsum generators on the Internet tend to repeat predefined
-    chunks as necessary.
-  </ListItem>
-  <ListItem active>This is the active link in this list.</ListItem>
-  <ListItem>
-    The majority have suffered alteration in some form, by injected humour, or
-    randomised words.
-  </ListItem>
-  <ListItem>Which don't look even slightly believable.</ListItem>
-</List>
-`;
-
-<Layout title="List">
+import { CodeBlock } from '../../components';
 
 # List
 
-<Divider />
+---
 
 ## Import
 
-<CodeSnippet code={listImport} />
+<CodeBlock
+    code={`
+import { List, ListItem } from '@zeal-ui/core';
+  `}
+/>
 
 ## Usage
 
 ### Ordered list
 
+<CodeBlock
+    code={`
 <List type="ol" styleType="upper-roman">
-  <ListItem>
-    There are many variations of passages of Lorem Ipsum available.
-  </ListItem>
-  <ListItem>
-    The majority have suffered alteration in some form, by injected humour, or
-    randomised words.
-  </ListItem>
-  <ListItem>Which don't look even slightly believable.</ListItem>
-  <ListItem>
-    All the Lorem Ipsum generators on the Internet tend to repeat predefined
-    chunks as necessary.
-  </ListItem>
+	<ListItem>There are many variations of passages of Lorem Ipsum available.</ListItem>
+	<ListItem>
+		The majority have suffered alteration in some form, by injected humour, or randomised words.
+	</ListItem>
+	<ListItem>Which don't look even slightly believable.</ListItem>
+	<ListItem>
+		All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as
+		necessary.
+	</ListItem>
 </List>
-
-<CodeSnippet code={orderedList} />
+  `}
+    live
+/>
 
 ### Unordered list
 
+<CodeBlock
+    code={`
 <List styleType="circle">
-  <ListItem>
-    There are many variations of passages of Lorem Ipsum available.
-  </ListItem>
-  <ListItem>
-    The majority have suffered alteration in some form, by injected humour, or
-    randomised words.
-  </ListItem>
-  <ListItem>Which don't look even slightly believable.</ListItem>
-  <ListItem>
-    All the Lorem Ipsum generators on the Internet tend to repeat predefined
-    chunks as necessary.
-  </ListItem>
+	<ListItem>There are many variations of passages of Lorem Ipsum available.</ListItem>
+	<ListItem>
+		The majority have suffered alteration in some form, by injected humour, or randomised words.
+	</ListItem>
+	<ListItem>Which don't look even slightly believable.</ListItem>
+	<ListItem>
+		All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as
+		necessary.
+	</ListItem>
 </List>
-
-<CodeSnippet code={unorderedList} />
+  `}
+    live
+/>
 
 ### Stacked list
 
+<CodeBlock
+    code={`
 <List type="stacked">
-  <ListItem>
-    There are many variations of passages of Lorem Ipsum available.
-  </ListItem>
-  <ListItem>
-    The majority have suffered alteration in some form, by injected humour, or
-    randomised words.
-  </ListItem>
-  <ListItem>Which don't look even slightly believable.</ListItem>
-  <ListItem>
-    All the Lorem Ipsum generators on the Internet tend to repeat predefined
-    chunks as necessary.
-  </ListItem>
+	<ListItem>There are many variations of passages of Lorem Ipsum available.</ListItem>
+	<ListItem>
+		The majority have suffered alteration in some form, by injected humour, or randomised words.
+	</ListItem>
+	<ListItem>Which don't look even slightly believable.</ListItem>
+	<ListItem>
+		All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as
+		necessary.
+	</ListItem>
 </List>
-
-<CodeSnippet code={stackedList} />
+  `}
+    live
+/>
 
 ### List with links
 
+<CodeBlock
+    code={`
 <List type="link">
-  <ListItem>
-    All the Lorem Ipsum generators on the Internet tend to repeat predefined
-    chunks as necessary.
-  </ListItem>
-  <ListItem active>This is the active link in this list.</ListItem>
-  <ListItem>
-    The majority have suffered alteration in some form, by injected humour, or
-    randomised words.
-  </ListItem>
-  <ListItem>Which don't look even slightly believable.</ListItem>
+	<ListItem>
+		<a href="#" alt="dummyLink">
+			Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+		</a>
+	</ListItem>
+	<ListItem>
+		<a href="#" alt="dummyLink">
+			Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+		</a>
+	</ListItem>
+	<ListItem>
+		<a href="#" alt="dummyLink">
+			Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+		</a>
+	</ListItem>
 </List>
-
-<CodeSnippet code={linkedList} />
+`}
+    live
+/>
 
 ## Props
 
 ### List
 
-<InlineCode>type</InlineCode>
+`type`
 
 **Description**
 
@@ -174,11 +108,9 @@ It is used to set the type of the list.
 
 **Values**
 
-"ol" | "stacked" | "link"
+ol | stacked | link
 
-<Divider />
-
-<InlineCode>styleType</InlineCode>
+`styleType`
 
 **Description**
 
@@ -186,13 +118,11 @@ It is used to set the type of the style for the list items in the ordered and un
 
 **Values**
 
-String with valid _list-style-type_ value.
-
-<Divider />
+String with valid **list-style-type** value.
 
 ### ListItem
 
-<InlineCode>active</InlineCode>
+`active`
 
 **Description**
 
@@ -202,10 +132,6 @@ It is used to set link as active.
 
 Boolean value.
 
-<Divider />
-
 ## Note
 
-To learn more about customizing the components check **[customizing components](/docs/customizing-components)** in the docs for more info.
-
-</Layout>
+To learn about customizing the components check this **[section](/docs/customizing-components)** of the docs.

@@ -1,79 +1,62 @@
-import { Layout, Divider, InlineCode } from "@zeal-ui/core";
-import {
-  CodeSnippet,
-  CustomButton,
-  CustomComponents,
-} from "../../components/index";
-const customizingIndividualComponents = `
-import { Button, useStyles } from "@zeal-ui/core";
-const CustomButton = () => {
-    const styles = useStyles((style, theme) => \`
-        background-color:\${theme === "light" ? style.colors.blue[2] : style.colors.blue[3]}; 
-        :hover{
-            background-color:\${theme === "light" ? style.colors.red[2] : style.colors.red[3]};     
-        }
-        font-size:1.25rem;
-    \`);
-    return (
-        <Button width="10rem" customStyles={styles}>Custom Button</Button>
-    );
-};
-`;
-const customizingMultipleComponents = `
-import { Container, useStyles, Text, Button } from "@zeal-ui/core";
-const CustomComponents = () => {
-    const styles = useStyles((style, theme) => \`
-        width:50%;
-        border:1px solid \${theme === "light" ? "black" : "white"};
-        border-radius:0.5rem;
-        padding:0.5rem;
-        box-sizing:border-box;
-        .content{
-            width:100%;
-            text-align:center;
-        }
-        .btn{
-            width:80%; 
-            background-color:\${theme === "light" ? style.colors.blue[2] : style.colors.blue[3]}; 
-            font-size:1.25rem;
-        }
-        .btn:hover{
-            background-color:\${theme === "light" ? style.colors.red[2] : style.colors.red[3]};     
-        }
-    \`);
-    return (
-        <Container type="col" rowCenter customStyles={styles}>
-            <Button className="btn">Customizing multiple components</Button>
-            <Text className="content">
-                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-            </Text>
-        </Container>
-    );
-};
-`;
-
-<Layout title="Customizing Components">
+import { CodeBlock } from '../../components';
 
 # Customizing Components
 
-<Divider />
+---
 
-There are two ways to customize Zeal UI components.
+## Customizing single component
 
-## 1. Customizing individual components
+Pass the component that you want to customize to the `styled` constructor from styled-components.
 
-Every component receives a <InlineCode>customStyles</InlineCode> prop and you can pass your css to it customize them. Let's see an example below.
+<CodeBlock
+    code={`
+const CustomButton = styled(Button)\`
+    background-color: hsl(25,65%,65%);
+    &:hover{
+        background-color: hsl(25,60%,60%);
+    }
+\`
+\r
+render(
+    <CustomButton>Custom Button</CustomButton>
+)
+    `}
+    noInline
+    live
+/>
 
-<CustomButton />
+## Customizing multiple components within a page
 
-<CodeSnippet code={customizingIndividualComponents} />
+Pass the Container component to the `styled` constructor from styled-components and use class names to style all the components within the Container.
 
-## 2. Customizing multiple components within a page
-
-To customize multiple components we can pass the css to the <InlineCode>customStyles</InlineCode> prop of the container component. Let's see an example below.
-
-<CustomComponents />
-
-<CodeSnippet code={customizingMultipleComponents} />
-
-</Layout>
+<CodeBlock
+    code={`
+const HomeStyled = styled(Container)\`
+    .text{
+        text-transform: uppercase;
+    }
+    .btn{
+        background-color: hsl(25,65%,65%);
+        padding: 0.25rem;
+    }
+    .btn:hover{
+        background-color: hsl(25,60%,60%);
+    }
+\`;
+\r
+const Home = () => {
+    return (
+        <HomeStyled type="col" width="100%" rowCenter>
+            <Text className="text">Welcome to Home page</Text>
+            <Button className="btn">Custom Button</Button>
+        </HomeStyled>
+    ); 
+}; 
+\r
+render(
+    <Home />
+) 
+    `}
+    noInline
+    live
+/>

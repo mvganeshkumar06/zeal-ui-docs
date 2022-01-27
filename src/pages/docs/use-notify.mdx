@@ -1,47 +1,41 @@
-import { Layout, Divider, InlineCode } from "@zeal-ui/core";
-import { CodeSnippet, UseNotifyDemo } from "../../components/index";
-const useNotifyImport = `
-import { useNotify } from "@zeal-ui/core";
-`;
-const useNotify = `
-const UseNotifyDemo = () => {
+import { CodeBlock } from '../../components';
+
+# useNotify
+
+---
+
+## Import
+
+<CodeBlock
+    code={`
+import { useNotify } from '@zeal-ui/core';
+    `}
+/>
+
+## Usage
+
+<CodeBlock
+    code={`
+function useNotifyDemo () {
     const { isOpen, onOpen, onClose } = useNotify();
     return (
         <Container type="col" width="100%">
-            <Button onClick={() => onOpen("TOAST_CENTER")}>
-                Toast center
+            <Button  color="secondary" onClick={() => onOpen("TOAST")}>
+                Toast
             </Button>
             <Toast
-                type="center"
-                delay={3000}
-                isOpen={isOpen === "TOAST_CENTER"}
+                isOpen={isOpen === "TOAST"}
                 onClose={onClose}
-                color="blue"
+                delay={3000}
+                bottom="2rem"
+                left="35%"
+                color="secondary"
             >
-                <Text>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt.
-                </Text>
+                A secondary colored toast placed at the bottom of the view port.
             </Toast>
         </Container>
     );
 };
-`;
-
-<Layout title="useNotify">
-
-# useNotify
-
-<Divider />
-
-## Import
-
-<CodeSnippet code={useNotifyImport} />
-
-## Usage
-
-<UseNotifyDemo />
-
-<CodeSnippet code={useNotify} />
-
-</Layout>
+    `}
+    live
+/>

@@ -1,24 +1,37 @@
-import {
-  Layout,
-  Divider,
-  InlineCode,
-  Image,
-  Container,
-  Text,
-} from "@zeal-ui/core";
-import { CodeSnippet } from "../../components/index";
-const imageImport = `
-import { Image } from "@zeal-ui/core";
-`;
-const image = `
+import { CodeBlock } from '../../components';
+
+# Image
+
+---
+
+## Import
+
+<CodeBlock
+    code={`
+import { Image } from '@zeal-ui/core';
+    `}
+/>
+
+## Usage
+
+### Image
+
+<CodeBlock
+    code={`
 <Image
     src="https://images.unsplash.com/photo-1494548162494-384bba4ab999"
     alt="nature"
     width="8rem"
     height="8rem"
 />
-`;
-const imageRound = `
+    `}
+    live
+/>
+
+### Image Round
+
+<CodeBlock
+    code={`
 <Image
     src="https://images.unsplash.com/photo-1494548162494-384bba4ab999"
     alt="nature"
@@ -26,171 +39,91 @@ const imageRound = `
     height="8rem"
     type="round"
 />
-`;
-const imageFallback = `
-<Image
-    width="8rem"
-    height="8rem"
+    `}
+    live
 />
-`;
-const imageRowAndCol = `
-const styles = \`
-    .containerCol{
-        width:18rem;
-        height:25rem;
-        margin:1rem 0rem;
-        @media(min-width:1024px){
-            width:18rem;
-            height:25rem;
-        }
-    }
-    .containerRow{
-        width:18rem;
-        height:12rem;
-        margin:1rem 0rem;
-        @media(min-width:1024px){
-            width:25rem;
-            height:15rem;
-        }
-    }
-    .content{
-        padding:0.5rem;
-        box-sizing:border-box;
-    }
-\`;
-<Container type="col" customStyles={styles}>
-    <Container type="col" withBorder className="containerCol">
-        <Image
-            src="https://images.unsplash.com/photo-1494548162494-384bba4ab999"
-            alt="nature"
-            type="row"
-        />
-        <Text width="100%" height="85%" scrollAuto className="content">
-            Lorem Ipsum is simply dummy text of the printing and
-            typesetting industry. Lorem Ipsum has been the industry's
-            standard dummy text ever since the 1500s, when an unknown
-            printer took a galley of type and scrambled it to make a
-            type specimen book.
-        </Text>
-    </Container>
-    <Container type="row" withBorder className="containerRow">
-        <Image
-            src="https://images.unsplash.com/photo-1494548162494-384bba4ab999"
-            alt="nature"
-            type="col"
-        />
-        <Text width="100%" height="85%" scrollAuto className="content">
-            Lorem Ipsum is simply dummy text of the printing and
-            typesetting industry. Lorem Ipsum has been the industry's
-            standard dummy text ever since the 1500s, when an unknown
-            printer took a galley of type and scrambled it to make a
-            type specimen book.
-        </Text>
-    </Container>
-</Container>
-`;
-const styles = `
-    .containerCol{
-        width:18rem;
-        height:25rem;
-        margin:1rem 0rem;
-        @media(min-width:1024px){
-            width:18rem;
-            height:25rem;
-        }
-    }
-    .containerRow{
-        width:18rem;
-        height:12rem;
-        margin:1rem 0rem;
-        @media(min-width:1024px){
-            width:25rem;
-            height:15rem;
-        }
-    }
-    .content{
-        padding:0.5rem;
-        box-sizing:border-box;
-    }
-`;
-
-<Layout title="Image">
-
-# Image
-
-<Divider />
-
-## Import
-
-<CodeSnippet code={imageImport} />
-
-## Usage
-
-### Image
-
-<Image
-  src="https://images.unsplash.com/photo-1494548162494-384bba4ab999"
-  alt="nature"
-  width="8rem"
-  height="8rem"
-/>
-
-<CodeSnippet code={image} />
-
-### Image Round
-
-<Image
-  src="https://images.unsplash.com/photo-1494548162494-384bba4ab999"
-  alt="nature"
-  width="8rem"
-  height="8rem"
-  type="round"
-/>
-
-<CodeSnippet code={imageRound} />
 
 ### Image Fallback
 
-<Image width="8rem" height="8rem" />
-
-<CodeSnippet code={imageFallback} />
+<CodeBlock
+    code={`
+<Image width="8rem" height="8rem" src="broken-link" />
+    `}
+    live
+/>
 
 ### Image row and column
 
-<Container type="col" customStyles={styles}>
-  <Container type="col" withBorder className="containerCol">
-    <Image
-      src="https://images.unsplash.com/photo-1494548162494-384bba4ab999"
-      alt="nature"
-      type="row"
-    />
-    <Text width="100%" height="85%" scrollAuto className="content">
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-      Lorem Ipsum has been the industry's standard dummy text ever since the
-      1500s, when an unknown printer took a galley of type and scrambled it to
-      make a type specimen book.
-    </Text>
-  </Container>
-  <Container type="row" withBorder className="containerRow">
-    <Image
-      src="https://images.unsplash.com/photo-1494548162494-384bba4ab999"
-      alt="nature"
-      type="col"
-    />
-    <Text width="100%" height="85%" scrollAuto className="content">
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-      Lorem Ipsum has been the industry's standard dummy text ever since the
-      1500s, when an unknown printer took a galley of type and scrambled it to
-      make a type specimen book.
-    </Text>
-  </Container>
-</Container>
-
-<CodeSnippet code={imageRowAndCol} />
+<CodeBlock
+    code={`
+const ImageContainer = styled(Container)\`
+    .col{
+        width: 12rem;
+        height: 20rem;
+        margin: 0.5rem;
+    }
+\r      
+    .row{
+        width: 15rem;
+        height: 10rem;
+        margin: 0.5rem;
+    }
+\r
+    .content{
+        padding: 0rem 0.5rem;
+    }
+\r
+    @media(min-width: \${({theme})=> theme.breakpoint.tabletPotrait}){
+        flex-direction: row;
+\r
+        .col{
+            width: 15rem;
+            height: 30rem;
+        }
+\r      
+        .row{
+            width: 30rem;
+            height: 15rem;
+        }
+    }
+\`
+\r
+render(
+    <ImageContainer type="col" width="100%">
+        <Container type="col" withBorder className="col">
+            <Image
+                src="https://images.unsplash.com/photo-1494548162494-384bba4ab999"
+                alt="nature"
+                type="row"
+            />
+            <Text width="100%" height="90%" scrollAuto className="content">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                has been the industry's standard dummy text ever since the 1500s, when an unknown
+                printer took a galley of type and scrambled it to make a type specimen book.
+            </Text>
+        </Container>
+        <Container type="row" withBorder className="row">
+            <Image
+                src="https://images.unsplash.com/photo-1494548162494-384bba4ab999"
+                alt="nature"
+                type="col"
+            />
+            <Text width="100%" height="90%" scrollAuto className="content">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                has been the industry's standard dummy text ever since the 1500s, when an unknown
+                printer took a galley of type and scrambled it to make a type specimen book.
+            </Text>
+        </Container>
+    </ImageContainer>
+); 
+    `}
+    noInline
+    live
+/>
 
 ## Props
 
-<InlineCode>src</InlineCode>
+`src`
 
 **Description**
 
@@ -200,9 +133,7 @@ It is used to set the source of the image.
 
 Path to the image.
 
-<Divider />
-
-<InlineCode>alt</InlineCode>
+`alt`
 
 **Description**
 
@@ -212,9 +143,7 @@ It is used to set the alternate text when image is not available.
 
 Text describing the image.
 
-<Divider />
-
-<InlineCode>width</InlineCode>
+`width`
 
 **Description**
 
@@ -224,9 +153,7 @@ It is used to set the width of the image.
 
 String with valid width.
 
-<Divider />
-
-<InlineCode>height</InlineCode>
+`height`
 
 **Description**
 
@@ -236,9 +163,7 @@ It is used to set the height of the image.
 
 String with valid height.
 
-<Divider />
-
-<InlineCode>type</InlineCode>
+`type`
 
 **Description**
 
@@ -246,12 +171,8 @@ It is used to set the type of the image.
 
 **Values**
 
-"round"
-
-<Divider />
+row | col | round
 
 ## Note
 
-To learn more about customizing the components check **[customizing components](/docs/customizing-components)** in the docs for more info.
-
-</Layout>
+To learn about customizing the components check this **[section](/docs/customizing-components)** of the docs.

@@ -1,96 +1,76 @@
-import {
-  Layout,
-  Divider,
-  Button,
-  Image,
-  InlineCode,
-  Span,
-} from "@zeal-ui/core";
-import { CodeSnippet } from "../../components/index";
-const buttonImport = `
-import { Button } from "@zeal-ui/core";
-`;
-const button = `
-<Button color="blue">Button</Button>
-`;
-const buttonFloating = `
-<Button type="floating" top="5rem" right="10%">
-  Button Floating
-</Button>
-`;
-const buttonWithIcon = `
-<Span
-  customStyles={\`
-    .icon{
-        margin-right:0.5rem;
-    }
-\`}
->
-  <Button width="10rem" height="2rem">
-    <Image
-      src="/phone.svg"
-      alt="phone"
-      width="1.5rem"
-      height="1.5rem"
-      className="icon"
-    />
-    Button with Icon
-  </Button>
-</Span>
-`;
-
-<Layout title="Button">
+import { CodeBlock } from '../../components';
 
 # Button
 
-<Divider />
+---
 
 ## Import
 
-<CodeSnippet code={buttonImport} />
+<CodeBlock
+    code={`
+import { Button } from '@zeal-ui/core';
+  `}
+/>
 
 ## Usage
 
 ### Button
 
-<Button color="blue">Button</Button>
-
-<CodeSnippet code={button} />
+<CodeBlock
+    code={`
+<Container type="col">
+  <Button>Primary Button</Button>
+  <Button color="secondary">Secondary Button</Button>
+  <Button color="accent">Accent Button</Button>
+</Container>
+  `}
+    live
+/>
 
 ### Button Floating
 
-<Button type="floating" top="5rem" right="10%">
+<CodeBlock
+    code={`
+<Button floating bottom="1rem" right="1rem">
   Button Floating
 </Button>
-
-<CodeSnippet code={buttonFloating} />
+  `}
+    live
+/>
 
 ### Button with Icon
 
-<Span
-  customStyles={`
-    .icon{
-        margin-right:0.5rem;
-    }
-`}
->
-  <Button width="10rem" height="2rem">
-    <Image
-      src="/phone.svg"
-      alt="phone"
-      width="1.5rem"
-      height="1.5rem"
-      className="icon"
-    />
-    Button with Icon
-  </Button>
-</Span>
-
-<CodeSnippet code={buttonWithIcon} />
+<CodeBlock
+    code={`
+const ButtonStyled = styled(Button)\`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+\r
+  .icon{
+    border-radius: 50%;
+    margin-right: 0.5rem;
+  }
+\r
+  .text{
+    margin: 0rem;
+  }
+\`;
+\r
+render(
+  <ButtonStyled width="10rem" height="2rem" color="warning">
+      <Image src="/phone.svg" alt="phone" width="1.5rem" height="1.5rem" className="icon" />
+      <Text>Button with Icon</Text>
+  </ButtonStyled>
+);
+  `}
+    noInline
+    live
+/>
 
 ## Props
 
-<InlineCode>width</InlineCode>
+`width`
 
 **Description**
 
@@ -100,9 +80,7 @@ It is used to set the width of the button.
 
 String with valid width.
 
-<Divider />
-
-<InlineCode>height</InlineCode>
+`height`
 
 **Description**
 
@@ -112,9 +90,7 @@ It is used to set the height of the button.
 
 String with valid height.
 
-<Divider />
-
-<InlineCode>color</InlineCode>
+`color`
 
 **Description**
 
@@ -122,36 +98,28 @@ It is used to set the color of the button.
 
 **Values**
 
-"gray" | "red" | "yellow" | "blue" | "orange" | "green" | "purple" | "pink"
+primary | secondary | accent | error | warning | success
 
-<Divider />
-
-<InlineCode>type</InlineCode>
+`floating`
 
 **Description**
 
-It is used to set the type of the button.
+It is used to set the position of the button based on the view port.
 
 **Values**
 
-"floating"
+Boolean value.
 
-<Divider />
-
-<InlineCode>top | right | bottom | left</InlineCode>
+`top | right | bottom | left`
 
 **Description**
 
-It is used to set the position of the button when the type is set to "floating".
+It is used to set the position of the button when the "floating" prop is true.
 
 **Values**
 
 String with valid position.
 
-<Divider />
-
 ## Note
 
-To learn more about customizing the components check **[customizing components](/docs/customizing-components)** in the docs for more info.
-
-</Layout>
+To learn about customizing the components check this **[section](/docs/customizing-components)** of the docs.

@@ -1,60 +1,35 @@
-import { Layout, Divider, InlineCode, Text } from "@zeal-ui/core";
-import { CodeSnippet } from "../../components/index";
-const textImport = `
-import { Text } from "@zeal-ui/core";
-`;
-const mainHeading = `
-<Text type="mainHeading">Main Heading</Text>
-`;
-const subHeading = `
-<Text type="subHeading">Sub Heading</Text>
-`;
-const text = `
-<Text>
-    Contrary to popular belief, Lorem Ipsum is not simply random
-    text. It has roots in a piece of classical Latin literature from
-    45 BC, making it over 2000 years old. Richard McClintock, a
-    Latin professor at Hampden-Sydney College in Virginia, looked up
-    one of the more obscure Latin words, consectetur, from a Lorem
-    Ipsum passage, and going through the cites of the word in
-    classical literature, discovered the undoubtable source.
-</Text>
-`;
-const textCustomized = `
-<Text width="15rem" height="10rem" bold center color="blue" scrollAuto>
-    Contrary to popular belief, Lorem Ipsum is not simply random
-    text. It has roots in a piece of classical Latin literature from
-    45 BC, making it over 2000 years old. Richard McClintock, a
-    Latin professor at Hampden-Sydney College in Virginia, looked up
-    one of the more obscure Latin words, consectetur, from a Lorem
-    Ipsum passage, and going through the cites of the word in
-    classical literature, discovered the undoubtable source.
-</Text>
-`;
-
-<Layout title="Text">
+import { CodeBlock } from '../../components';
 
 # Text
 
-<Divider />
+---
 
 ## Import
 
-<CodeSnippet code={textImport} />
+<CodeBlock
+    code={`
+import { Text } from '@zeal-ui/core';
+  `}
+/>
 
 ## Usage
 
-<Text type="mainHeading">Main Heading</Text>
-
-<CodeSnippet code={mainHeading} />
-
-<Text type="subHeading">Sub Heading</Text>
-
-<CodeSnippet code={subHeading} />
+<CodeBlock
+    code={`
+    <Container type="col">
+      <Text type="mainHeading">Main Heading</Text>
+      <Text type="subHeading1">Sub Heading 1</Text>
+      <Text type="subHeading2">Sub Heading 2</Text>
+    </Container>
+  `}
+    live
+/>
 
 ### Regular Text
 
-<Text>
+<CodeBlock
+    code={`
+<Text width="80%" bold>
   Contrary to popular belief, Lorem Ipsum is not simply random text. It has
   roots in a piece of classical Latin literature from 45 BC, making it over 2000
   years old. Richard McClintock, a Latin professor at Hampden-Sydney College in
@@ -62,25 +37,13 @@ const textCustomized = `
   Lorem Ipsum passage, and going through the cites of the word in classical
   literature, discovered the undoubtable source.
 </Text>
-
-<CodeSnippet code={text} />
-
-### Text Customized
-
-<Text width="18rem" height="10rem" bold center color="blue" scrollAuto>
-  Contrary to popular belief, Lorem Ipsum is not simply random text. It has
-  roots in a piece of classical Latin literature from 45 BC, making it over 2000
-  years old. Richard McClintock, a Latin professor at Hampden-Sydney College in
-  Virginia, looked up one of the more obscure Latin words, consectetur, from a
-  Lorem Ipsum passage, and going through the cites of the word in classical
-  literature, discovered the undoubtable source.
-</Text>
-
-<CodeSnippet code={textCustomized} />
+  `}
+    live
+/>
 
 ## Props
 
-<InlineCode>width</InlineCode>
+`width`
 
 **Description**
 
@@ -90,9 +53,7 @@ It is used to set the width of the text.
 
 String with valid width.
 
-<Divider />
-
-<InlineCode>height</InlineCode>
+`height`
 
 **Description**
 
@@ -102,33 +63,27 @@ It is used to set the height of the text.
 
 String with valid height.
 
-<Divider />
-
-<InlineCode>color</InlineCode>
+`type`
 
 **Description**
 
-It is used to set the color of the text.
+It is used to set the type of the text.
 
 **Values**
 
-"gray" | "red" | "yellow" | "blue" | "orange" | "green" | "purple" | "pink"
+mainHeading | subHeading1 | subHeading2.
 
-<Divider />
-
-<InlineCode>bold</InlineCode>
+`size`
 
 **Description**
 
-It is used to make the text bold.
+It is used to set the font size of the text.
 
 **Values**
 
-Boolean value.
+String with valid font size.
 
-<Divider />
-
-<InlineCode>center</InlineCode>
+`center`
 
 **Description**
 
@@ -138,10 +93,26 @@ It is used to position the text in the center based on its width.
 
 Boolean value.
 
-<Divider />
+`bold`
+
+**Description**
+
+It is used to make the text bold.
+
+**Values**
+
+Boolean value.
+
+`scrollAuto`
+
+**Description**
+
+It is used to add a scrollbar on x or y axis or both if the contents of the text overflows.
+
+**Values**
+
+Boolean value.
 
 ## Note
 
-To learn more about customizing the components check **[customizing components](/docs/customizing-components)** in the docs for more info.
-
-</Layout>
+To learn about customizing the components check this **[section](/docs/customizing-components)** of the docs.

@@ -1,31 +1,36 @@
-import { Layout, Divider, InlineCode } from "@zeal-ui/core";
-import { CodeSnippet } from "../../components/index";
-const inlineCodeImport = `
-import { InlineCode } from "@zeal-ui/core";
-`;
-const inlineCode = `
-<InlineCode>Inline Code</InlineCode>
-`;
-
-<Layout title="Inline Code">
+import { CodeBlock } from '../../components';
 
 # InlineCode
 
-<Divider />
+---
 
 ## Import
 
-<CodeSnippet code={inlineCodeImport} />
+<CodeBlock
+    code={`
+import { InlineCode } from '@zeal-ui/core';
+    `}
+/>
 
 ## Usage
 
-<InlineCode>Inline Code</InlineCode>
-
-<CodeSnippet code={inlineCode} />
+<CodeBlock
+    code={`
+<Container type="col">
+  <InlineCode>Primary Inline Code</InlineCode>
+  <InlineCode color="secondary">Secondary Inline Code</InlineCode>
+  <InlineCode color="accent">Accent Inline Code</InlineCode>
+  <InlineCode color="error">Error Inline Code</InlineCode>
+  <InlineCode color="warning">Warning Inline Code</InlineCode>
+  <InlineCode color="success">Success Inline Code</InlineCode>
+</Container>
+    `}
+    live
+/>
 
 ## Props
 
-<InlineCode>width</InlineCode>
+`width`
 
 **Description**
 
@@ -35,9 +40,7 @@ It is used to set the width of inline code.
 
 String with valid width.
 
-<Divider />
-
-<InlineCode>height</InlineCode>
+`height`
 
 **Description**
 
@@ -47,9 +50,7 @@ It is used to set the height of the inline code.
 
 String with valid height.
 
-<Divider />
-
-<InlineCode>color</InlineCode>
+`color`
 
 **Description**
 
@@ -57,12 +58,8 @@ It is used to set the color of inline code.
 
 **Values**
 
-"gray" | "red" | "yellow" | "blue" | "orange" | "green" | "purple" | "pink"
-
-<Divider />
+primary | secondary | accent | error | warning | success
 
 ## Note
 
-To learn more about customizing the components check **[customizing components](/docs/customizing-components)** in the docs for more info.
-
-</Layout>
+To learn about customizing the components check this **[section](/docs/customizing-components)** of the docs.

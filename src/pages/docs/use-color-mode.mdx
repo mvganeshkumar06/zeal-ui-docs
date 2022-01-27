@@ -1,0 +1,29 @@
+import { CodeBlock } from '../../components';
+
+# useColorMode
+
+---
+
+## Import
+
+<CodeBlock
+    code={`
+import { useColorMode } from '@zeal-ui/core';
+    `}
+/>
+
+## Usage
+
+<CodeBlock
+    code={`
+function useColorModeDemo () {
+    const { colorMode, toggleColorMode } = useColorMode();
+    return (
+        <Button color="secondary" onClick={toggleColorMode}>
+            Switch to {colorMode === "light" ? "Dark" : "Light"} mode
+        </Button>
+    );
+};
+    `}
+    live
+/>

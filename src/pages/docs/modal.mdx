@@ -1,95 +1,91 @@
-import {
-  Layout,
-  Divider,
-  InlineCode,
-  Modal,
-  Container,
-  Button,
-  useNotify,
-} from "@zeal-ui/core";
-import { CodeSnippet, ModalDemo } from "../../components/index";
-const modalImport = `
-import { Modal, useNotify } from "@zeal-ui/core";
-`;
-const modal = `
-const ModalDemo=()=>{
-    const styles = \`
-        .modal{
-            width: 18rem;
-            height: 20rem;
-            @media(min-width:425px){
-                width:25rem;
-                height:25rem;
-            }
-        }
-    \`;
-    const { isOpen, onOpen, onClose } = useNotify();
-    return (
-        <Container type="col" customStyles={styles}>
-            <Button onClick={() => onOpen("REGULAR_MODAL")}>Regular Modal</Button>
-            <Button onClick={() => onOpen("CENTERED_MODAL")}>Centered Modal</Button>
-            <Modal isOpen={isOpen === "REGULAR_MODAL"} onClickAway={onClose} className="modal">
-                <Container type="row" rowBetween colCenter>
-                    <Text type="subHeading">Modal</Text>
-                    <Button onClick={onClose}>X</Button>
-                </Container>
-                <Text>
-                    It is a long established fact that a reader will be
-                    distracted by the readable content of a page when looking at
-                    its layout. The point of using Lorem Ipsum is that it has a
-                    more-or-less normal distribution of letters, as opposed to
-                    using 'Content here, content here', making it look like
-                    readable English. Many desktop publishing packages and web
-                    page editors now use Lorem Ipsum as their default model
-                    text, and a search for 'lorem ipsum' will uncover many web
-                    sites still in their infancy. Various versions have evolved
-                    over the years, sometimes by accident, sometimes on purpose
-                    (injected humour and the like)
-                </Text>
-            </Modal>
-            <Modal type="center" isOpen={isOpen === "CENTERED_MODAL"} onClickAway={onClose} className="modal">
-                <Container type="row" rowBetween colCenter>
-                    <Text type="subHeading">Modal</Text>
-                    <Button onClick={onClose}>X</Button>
-                </Container>
-                <Text>
-                    It is a long established fact that a reader will be
-                    distracted by the readable content of a page when looking at
-                    its layout. The point of using Lorem Ipsum is that it has a
-                    more-or-less normal distribution of letters, as opposed to
-                    using 'Content here, content here', making it look like
-                    readable English. Many desktop publishing packages and web
-                    page editors now use Lorem Ipsum as their default model
-                    text, and a search for 'lorem ipsum' will uncover many web
-                    sites still in their infancy. Various versions have evolved
-                    over the years, sometimes by accident, sometimes on purpose
-                    (injected humour and the like)
-                </Text>
-            </Modal>
-        </Container>
-    );
-}
-`;
-
-<Layout title="Modal">
+import { CodeBlock } from '../../components';
 
 # Modal
 
-<Divider />
+---
 
 ## Import
 
-<CodeSnippet code={modalImport} />
+<CodeBlock
+    code={`
+import { Modal, useNotify } from "@zeal-ui/core";
+    `}
+/>
 
 ## Usage
 
-<ModalDemo />
-
-<CodeSnippet code={modal} />
+<CodeBlock
+    code={`
+const ModalStyled=styled(Container)\`
+    .modal{
+        width: 18rem;
+        height: 20rem;
+        @media(min-width:425px){
+            width:25rem;
+            height:25rem;
+        }
+    }
+\`;
+\r
+const ModalDemo=()=>{
+    const { isOpen, onOpen, onClose } = useNotify();
+    return (
+        <ModalStyled type="col">
+            <Button onClick={() => onOpen("REGULAR_MODAL")}>Regular Modal</Button>
+            <Button onClick={() => onOpen("CENTERED_MODAL")}>Centered Modal</Button>
+            <Modal type="col" isOpen={isOpen === "REGULAR_MODAL"} onClickAway={onClose} className="modal">
+                <Container type="row" width="100%" rowBetween colCenter>
+                    <Text type="subHeading1">Modal</Text>
+                    <Button onClick={onClose}>X</Button>
+                </Container>
+                <Text>
+                    It is a long established fact that a reader will be
+                    distracted by the readable content of a page when looking at
+                    its layout. The point of using Lorem Ipsum is that it has a
+                    more-or-less normal distribution of letters, as opposed to
+                    using 'Content here, content here', making it look like
+                    readable English. Many desktop publishing packages and web
+                    page editors now use Lorem Ipsum as their default model
+                    text, and a search for 'lorem ipsum' will uncover many web
+                    sites still in their infancy. Various versions have evolved
+                    over the years, sometimes by accident, sometimes on purpose
+                    (injected humour and the like)
+                </Text>
+            </Modal>
+            <Modal type="col" position="center" isOpen={isOpen === "CENTERED_MODAL"} onClickAway={onClose} className="modal">
+                <Container type="row" width="100%" rowBetween colCenter>
+                    <Text type="subHeading1">Modal</Text>
+                    <Button onClick={onClose}>X</Button>
+                </Container>
+                <Text>
+                    It is a long established fact that a reader will be
+                    distracted by the readable content of a page when looking at
+                    its layout. The point of using Lorem Ipsum is that it has a
+                    more-or-less normal distribution of letters, as opposed to
+                    using 'Content here, content here', making it look like
+                    readable English. Many desktop publishing packages and web
+                    page editors now use Lorem Ipsum as their default model
+                    text, and a search for 'lorem ipsum' will uncover many web
+                    sites still in their infancy. Various versions have evolved
+                    over the years, sometimes by accident, sometimes on purpose
+                    (injected humour and the like)
+                </Text>
+            </Modal>
+        </ModalStyled>
+    );
+}
+\r
+render(
+    <ModalDemo/>
+)
+    `}
+    noInline
+    live
+/>
 
 ## Props
 
-<InlineCode>width</InlineCode>
+`width`
 
 **Description**
 
@@ -99,9 +95,7 @@ It is used to set the width of the modal.
 
 String with valid width.
 
-<Divider />
-
-<InlineCode>height</InlineCode>
+`height`
 
 **Description**
 
@@ -111,21 +105,17 @@ It is used to set the height of the modal.
 
 String with valid height.
 
-<Divider />
-
-<InlineCode>type</InlineCode>
+`position`
 
 **Description**
 
-It is used to set the type of the modal.
+It is used to set the position of the modal based on the view port.
 
 **Values**
 
-"center"
+center.
 
-<Divider />
-
-<InlineCode>isOpen</InlineCode>
+`isOpen`
 
 **Description**
 
@@ -135,9 +125,7 @@ It is used to decide when the modal will be opened and closed.
 
 Boolean value.
 
-<Divider />
-
-<InlineCode>onClickAway</InlineCode>
+`onClickAway`
 
 **Description**
 
@@ -147,9 +135,7 @@ It is the function that will be called when user clicks away from the modal.
 
 Function that closes the modal.
 
-<Divider />
-
-<InlineCode>color</InlineCode>
+`color`
 
 **Description**
 
@@ -157,12 +143,8 @@ It is used to set the color of the modal.
 
 **Values**
 
-"gray" | "red" | "yellow" | "blue" | "orange" | "green" | "purple" | "pink"
-
-<Divider />
+primary | secondary | accent | error | warning | success
 
 ## Note
 
-To learn more about customizing the components check **[customizing components](/docs/customizing-components)** in the docs for more info.
-
-</Layout>
+To learn about customizing the components check this **[section](/docs/customizing-components)** of the docs.

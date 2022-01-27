@@ -1,52 +1,35 @@
-import { Layout, Divider, InlineCode } from "@zeal-ui/core";
-import { CodeSnippet, ToastDemo } from "../../components/index";
-const toastImport = `
+import { CodeBlock } from '../../components';
+
+# Toast
+
+---
+
+## Import
+
+<CodeBlock
+    code={`
 import { Toast, useNotify } from "@zeal-ui/core";
-`;
-const toast = `
-const ToastDemo = () => {
+    `}
+/>
+
+## Usage
+
+<CodeBlock
+    code={`
+function ToastDemo () {
     const { isOpen, onOpen, onClose } = useNotify();
     return (
         <Container type="col" width="100%">
-            <Container type="col">
-                <Button onClick={() => onOpen("TOAST_LEFT")}>
-                    Toast left
-                </Button>
-                <Button onClick={() => onOpen("TOAST_CENTER")}>
-                    Toast center
-                </Button>
-                <Button onClick={() => onOpen("TOAST_RIGHT")}>
-                    Toast right
-                </Button>
-            </Container>
+            <Button onClick={() => onOpen("TOAST")}>
+                Toast
+            </Button>
             <Toast
-                type="left"
-                delay={3000}
-                isOpen={isOpen === "TOAST_LEFT"}
+                isOpen={isOpen === "TOAST"}
                 onClose={onClose}
-                color="blue"
-            >
-                <Text>
-                    Lorem ipsum dolor sit amet.
-                </Text>
-            </Toast>
-            <Toast
-                type="center"
                 delay={3000}
-                isOpen={isOpen === "TOAST_CENTER"}
-                onClose={onClose}
-                color="blue"
-            >
-                <Text>
-                    Lorem ipsum dolor sit amet.
-                </Text>
-            </Toast>
-            <Toast
-                type="right"
-                delay={3000}
-                isOpen={isOpen === "TOAST_RIGHT"}
-                onClose={onClose}
-                color="blue"
+                bottom="2rem"
+                left="2rem"
+                color="secondary"
             >
                 <Text>
                     Lorem ipsum dolor sit amet.
@@ -55,27 +38,13 @@ const ToastDemo = () => {
         </Container>
     );
 };
-`;
-
-<Layout title="Toast">
-
-# Toast
-
-<Divider />
-
-## Import
-
-<CodeSnippet code={toastImport} />
-
-## Usage
-
-<ToastDemo />
-
-<CodeSnippet code={toast} />
+    `}
+    live
+/>
 
 ## Props
 
-<InlineCode>width</InlineCode>
+`width`
 
 **Description**
 
@@ -85,9 +54,7 @@ It is used to set the width of the toast.
 
 String with valid width.
 
-<Divider />
-
-<InlineCode>height</InlineCode>
+`height`
 
 **Description**
 
@@ -97,9 +64,7 @@ It is used to set the height of the toast.
 
 String with valid height.
 
-<Divider />
-
-<InlineCode>isOpen</InlineCode>
+`isOpen`
 
 **Description**
 
@@ -109,9 +74,7 @@ It is used to decide when the toast will be opened or closed.
 
 Boolean value.
 
-<Divider />
-
-<InlineCode>onClose</InlineCode>
+`onClose`
 
 **Description**
 
@@ -121,9 +84,7 @@ It is the function that closes the toast after the delay.
 
 Function that closes the toast.
 
-<Divider />
-
-<InlineCode>delay</InlineCode>
+`delay`
 
 **Description**
 
@@ -133,21 +94,17 @@ It is the duration after which the toast gets closed.
 
 Number representing time in ms.
 
-<Divider />
-
-<InlineCode>type</InlineCode>
+`top | right | bottom | left`
 
 **Description**
 
-It is used to set the type of the toast.
+It is used to set the position of the toast based on the view port.
 
 **Values**
 
-"left" | "center" | "right"
+Valid position.
 
-<Divider />
-
-<InlineCode>color</InlineCode>
+`color`
 
 **Description**
 
@@ -155,12 +112,8 @@ It is used to set the color of the toast.
 
 **Values**
 
-"gray" | "red" | "yellow" | "blue" | "orange" | "green" | "purple" | "pink"
-
-<Divider />
+primary | secondary | accent | error | warning | success
 
 ## Note
 
-To learn more about customizing the components check **[customizing components](/docs/customizing-components)** in the docs for more info.
-
-</Layout>
+To learn about customizing the components check this **[section](/docs/customizing-components)** of the docs.

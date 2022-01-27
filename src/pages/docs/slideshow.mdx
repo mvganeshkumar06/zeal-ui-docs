@@ -1,14 +1,32 @@
-import { Layout, Divider, InlineCode, SlideShow, Image } from "@zeal-ui/core";
-import { CodeSnippet } from "../../components/index";
-import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
-import ChevronRightIcon from "@material-ui/icons/ChevronRight";
-const slideShowImport = `
+import { CodeBlock } from '../../components';
+
+# Slide Show
+
+---
+
+## Import
+
+<CodeBlock
+    code={`
 import { Slideshow } from "@zeal-ui/core";
-`;
-const slideShow = `
-<SlideShow slides={["Slide 1", "Slide 2", "Slide 3"]} width="15rem" height="5rem" />
-`;
-const slideShowCustomized = `
+    `}
+/>
+
+## Usage
+
+### Slideshow
+
+<CodeBlock
+    code={`
+<SlideShow slides={["Slide 1", "Slide 2", "Slide 3"]} width="15rem" height="10rem" />
+    `}
+    live
+/>
+
+### Slideshow Customized
+
+<CodeBlock
+    code={`
 const trees = (
     <Image
         src="https://images.pexels.com/photos/1770809/pexels-photo-1770809.jpeg"
@@ -17,6 +35,7 @@ const trees = (
         height="10rem"
     />
 );
+\r
 const stream = (
     <Image
         src="https://images.pexels.com/photos/3225517/pexels-photo-3225517.jpeg"
@@ -25,6 +44,7 @@ const stream = (
         height="10rem"
     />
 );
+\r
 const mountains = (
     <Image
         src="https://images.pexels.com/photos/1785493/pexels-photo-1785493.jpeg"
@@ -33,76 +53,23 @@ const mountains = (
         height="10rem"
     />
 );
-<SlideShow
-    slides={[stream, trees, mountains]}
-    width="18rem"
-    prev={<ChevronLeftIcon fontSize="large" />}
-    next={<ChevronRightIcon fontSize="large" />}
-    color="pink"
+\r
+render(
+    <SlideShow
+        slides={[stream, trees, mountains]}
+        width="18rem"
+        height="auto"
+        color="success"
+    />  
+)
+    `}
+    noInline
+    live
 />
-`;
-const trees = (
-  <Image
-    src="https://images.pexels.com/photos/1770809/pexels-photo-1770809.jpeg"
-    alt="trees"
-    width="10rem"
-    height="10rem"
-  />
-);
-const stream = (
-  <Image
-    src="https://images.pexels.com/photos/3225517/pexels-photo-3225517.jpeg"
-    alt="stream"
-    width="10rem"
-    height="10rem"
-  />
-);
-const mountains = (
-  <Image
-    src="https://images.pexels.com/photos/1785493/pexels-photo-1785493.jpeg"
-    alt="mountaines"
-    width="10rem"
-    height="10rem"
-  />
-);
-
-<Layout title="Slide Show">
-
-# Slide Show
-
-<Divider />
-
-## Import
-
-<CodeSnippet code={slideShowImport} />
-
-## Usage
-
-### Slideshow
-
-<SlideShow
-  slides={["Slide 1", "Slide 2", "Slide 3"]}
-  width="15rem"
-  height="5rem"
-/>
-
-<CodeSnippet code={slideShow} />
-
-### Slideshow Customized
-
-<SlideShow
-  slides={[stream, trees, mountains]}
-  width="18rem"
-  prev={<ChevronLeftIcon fontSize="large" />}
-  next={<ChevronRightIcon fontSize="large" />}
-  color="pink"
-/>
-
-<CodeSnippet code={slideShowCustomized} />
 
 ## Props
 
-<InlineCode>width</InlineCode>
+`width`
 
 **Description**
 
@@ -112,9 +79,7 @@ It is used to set the width of the slideshow.
 
 String with valid width.
 
-<Divider />
-
-<InlineCode>height</InlineCode>
+`height`
 
 **Description**
 
@@ -124,9 +89,7 @@ It is used to set the height of the slideshow.
 
 String with valid height.
 
-<Divider />
-
-<InlineCode>color</InlineCode>
+`color`
 
 **Description**
 
@@ -134,11 +97,9 @@ It is used to set the color of the slideshow.
 
 **Values**
 
-"gray" | "red" | "yellow" | "blue" | "orange" | "green" | "purple" | "pink"
+primary | secondary | accent | error | warning | success
 
-<Divider />
-
-<InlineCode>slides</InlineCode>
+`slides`
 
 **Description**
 
@@ -148,9 +109,7 @@ It is used to set the slides in the slideshow.
 
 React component.
 
-<Divider />
-
-<InlineCode>prev</InlineCode>
+`prev`
 
 **Description**
 
@@ -160,9 +119,7 @@ It is used to set the previous indicator in the slideshow.
 
 Icon or a react component.
 
-<Divider />
-
-<InlineCode>next</InlineCode>
+`next`
 
 **Description**
 
@@ -172,9 +129,7 @@ It is used to set the next indicator in the slideshow.
 
 Icon or react component.
 
-<Divider />
-
-<InlineCode>slidesCount</InlineCode>
+`slidesCount`
 
 **Description**
 
@@ -184,10 +139,16 @@ It is used to set the number of slides that will be shown at a time in the slide
 
 Number.
 
-<Divider />
+`arrowColor`
+
+**Description**
+
+It is used to set the color of the previous and the next arrow.
+
+**Values**
+
+primary | secondary | accent | error | warning | success
 
 ## Note
 
-To learn more about customizing the components check **[customizing components](/docs/customizing-components)** in the docs for more info.
-
-</Layout>
+To learn about customizing the components check this **[section](/docs/customizing-components)** of the docs.

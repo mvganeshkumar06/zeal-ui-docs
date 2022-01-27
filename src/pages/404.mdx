@@ -1,21 +1,8 @@
-import { Container, Button } from "@zeal-ui/core";
-const styles = `
-    padding:1rem;
-    box-sizing:border-box;
-`;
+import { Container, Text, Button } from '@zeal-ui/core';
 
-<Container type="col" width="100vw" height="50vh" rowCenter colCenter>
-
-<Container type="col" rowCenter withBorder customStyles={styles}>
-
-# You seem lost 🤔
-
-## Let's take you back
-
-<a href="/docs/getting-started">
-  <Button>Home</Button>
-</a>
-
-</Container>
-
+<Container type="col" width="100%" height="100%" rowCenter>
+    <Text type="mainHeading">The page you are looking for is not found.</Text>
+    <a href="/docs/getting-started">
+        <Button>Get Back Home</Button>
+    </a>
 </Container>

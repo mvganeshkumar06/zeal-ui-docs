@@ -1,18 +1,22 @@
-import {
-  Layout,
-  Divider,
-  InlineCode,
-  Menu,
-  Container,
-  Button,
-  useNotify,
-} from "@zeal-ui/core";
-import { CodeSnippet, MenuDemo } from "../../components/index";
-const menuImport = `
-import { Menu, useNotify } from "@zeal-ui/core";
-`;
-const menu = `
-const MenuDemo=()=>{
+import { CodeBlock } from '../../components';
+
+# Menu
+
+---
+
+## Import
+
+<CodeBlock
+    code={`
+import { Menu, useNotify } from '@zeal-ui/core';
+    `}
+/>
+
+## Usage
+
+<CodeBlock
+    code={`
+function MenuDemo () {
     const { isOpen, onOpen, onClose } = useNotify();
     return (
         <>
@@ -37,27 +41,13 @@ const MenuDemo=()=>{
         </>
     );
 }
-`;
-
-<Layout title="Menu">
-
-# Menu
-
-<Divider />
-
-## Import
-
-<CodeSnippet code={menuImport} />
-
-## Usage
-
-<MenuDemo />
-
-<CodeSnippet code={menu} />
+    `}
+    live
+/>
 
 ## Props
 
-<InlineCode>width</InlineCode>
+`width`
 
 **Description**
 
@@ -67,9 +57,7 @@ It is used to set the width of the menu.
 
 String with valid width.
 
-<Divider />
-
-<InlineCode>height</InlineCode>
+`height`
 
 **Description**
 
@@ -79,21 +67,7 @@ It is used to set the height of the menu.
 
 String with valid height.
 
-<Divider />
-
-<InlineCode>top | right | bottom | left</InlineCode>
-
-**Description**
-
-It is used to set the position of the menu.
-
-**Values**
-
-String with valid position.
-
-<Divider />
-
-<InlineCode>isOpen</InlineCode>
+`isOpen`
 
 **Description**
 
@@ -103,9 +77,7 @@ It is used to decide when the menu will be opened and closed.
 
 Boolean value.
 
-<Divider />
-
-<InlineCode>onClickAway</InlineCode>
+`onClickAway`
 
 **Description**
 
@@ -115,9 +87,17 @@ It is the function that will be called when user clicks away from the menu.
 
 Function that closes the menu.
 
-<Divider />
+`top | right | bottom | left`
 
-<InlineCode>color</InlineCode>
+**Description**
+
+It is used to set the position of the menu.
+
+**Values**
+
+String with valid position.
+
+`color`
 
 **Description**
 
@@ -125,12 +105,8 @@ It is used to set the color of the menu.
 
 **Values**
 
-"gray" | "red" | "yellow" | "blue" | "orange" | "green" | "purple" | "pink"
-
-<Divider />
+primary | secondary | accent | error | warning | success
 
 ## Note
 
-To learn more about customizing the components check **[customizing components](/docs/customizing-components)** in the docs for more info.
-
-</Layout>
+To learn about customizing the components check this **[section](/docs/customizing-components)** of the docs.
